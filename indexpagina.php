@@ -33,13 +33,22 @@ $verven = $_POST['behandeling2'];
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reserveren bij Christa</title>
+
+    <style>
+        <?php include 'stylesheet_info.css'; ?>
+    </style>
+
 </head>
 
 <body>
 
     <form action="bevestigd.php" method="post">
         Voornaam:<br>
-        <input type="text" name="voornaam" maxlength="50" required><br>
+        <input type="text" name="voornaam" maxlength="50" required>
+            <div class="tooltip">i
+            <span class="tooltiptext">Dit is nodig om...</span>
+            </div>
+<br>
         Achternaam:<br>
         <input type="text" name="achternaam" maxlength="100" required><br>
         Datum:<br>
