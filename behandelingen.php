@@ -22,6 +22,10 @@ $aantalpersonen = $_POST['aantal']
 
 <body>
 
+<header>
+    <h1>STAP 1 > STAP 2</h1>
+    <p>Kies de gewenste behandelingen.</p>
+</header>
     <!-- form action="indexpagina.php" method="post">
         Kies uw behandeling:<br>
 
@@ -50,6 +54,7 @@ $aantalpersonen = $_POST['aantal']
 
 
     <form action="indexpagina.php" method="post">
+
         Knippen:
         <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
          <br>
@@ -62,6 +67,7 @@ $aantalpersonen = $_POST['aantal']
         <input type="submit" name="bevestigd" value="Bevestigen">
 
     </form>
+<p>Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!</p>
 
 
     <script>

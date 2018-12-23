@@ -4,18 +4,28 @@
  * User: annel
  * Date: 10-12-2018
  * Time: 15:04
- */
+ */?>
+<html>
+
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+</html>
+<?php
 $aantalpersonen = $_POST['aantal'];
 $knippen = $_POST['behandeling1'];
 $verven = $_POST['behandeling2'];
 
-    if($aantalpersonen == 1) {
-        echo "U wilt voor " . $aantalpersonen . " persoon reserveren.";
-    }
+if ($knippen + $verven < $aantalpersonen) {
 
-    else{
-        echo "U wilt voor " . $aantalpersonen . " personen reserveren.";
-    }
+    echo '<script>   goBack();   </script>';
+}
+
+
 
 /*/ $behandelingen = $_POST[for($i = 0; $i < $aantalpersonen; $i++){
                              echo "behandeling".$i; }
@@ -43,7 +53,24 @@ $verven = $_POST['behandeling2'];
 
 <body>
 
+<header>
+    <h1>STAP 1 > STAP 2 > STAP 3</h1>
+    <p>Vul uw persoonlijke gegevens in.</p>
+</header>
+
+<?php
+if($aantalpersonen == 1) {
+    echo "U wilt voor " . $aantalpersonen . " persoon reserveren.";
+}
+
+else{
+    echo "U wilt voor " . $aantalpersonen . " personen reserveren.";
+}
+?>
+
+
     <form action="bevestigd.php" method="post">
+        <br>
         Voornaam:<br>
         <input class="text-box" type="text" name="voornaam" maxlength="50"" required>
             <div class="tooltip">i
@@ -79,8 +106,10 @@ $verven = $_POST['behandeling2'];
           </div>
           <br>
 
-    <!--    Aantal personen: <br> -->
+
+    <!--    Aantal personen             -->
         <input type="hidden" name="aantal" min="1" max="10" value="<?= $aantalpersonen ?>" required><br>
+    <!--    De behandelingen en hoevaak -->
         <input type="hidden" name="behandeling1" value="<?= $knippen ?>"<br>
         <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
 
@@ -91,6 +120,29 @@ $verven = $_POST['behandeling2'];
         <input type="submit" name="bevestigd" value="Bevestigen">
 
     </form>
+
+
+
+<!--
+
+DIT KAN IK DESNOODS GEBRUIKEN ALS HET ZELF NIET LUKT. DIT IS EEN DATEPICKER.
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$( function() {
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+//Following line of code is to set the default and minDate of datepicker.
+$( "#datepicker" ).datepicker({minDate: tomorrow,defaultDate:tomorrow});
+//Following line of code is to set value of default date on text box.
+$("#datepicker").val($.datepicker.formatDate('mm/dd/yy', tomorrow));
+} );
+</script>
+
+<p>Date: <input type="text" id="datepicker"></p>
+-->
 
 
 

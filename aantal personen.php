@@ -6,6 +6,7 @@
  * Time: 15:04
  */
 
+
 ?>
 
 <!doctype html>
@@ -17,13 +18,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reserveren bij Christa</title>
+    <style>
+    <?php include 'stylesheet_forms.css'; ?>
+    </style>
 </head>
 
 <body>
+<header>
+    <h1>STAP 1</h1>
+    <p>Kies het aantal personen.</p>
+</header>
+
 
     <form action="behandelingen.php" method="post">
-        Voor hoeveel personen wilt u reserveren?<br>
-        <input type="number" name="aantal" min="1" max="10" required><br>
+
+        <input class="text-box" type="number" name="aantal" min="1" max="10" value="1" required> Maximaal 10 personen <br>
         
         <input type="submit" name="bevestigd" value="Bevestigen">
 
