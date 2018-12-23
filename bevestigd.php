@@ -49,7 +49,11 @@ if(isset($_POST['bevestigd'])) {
     $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)
     or die('Error ' . mysqli_error($conn) . '<br> Query:' . $toevoegen);
 
+    ?> De reservering is gelukt! <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button>
+    <?php
+
 } else {
 
     echo "<p style='font-size: 27px;'>"."Error: de reservering is niet goed uitgevoerd.";
+    ?> <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button> <?php
 }
