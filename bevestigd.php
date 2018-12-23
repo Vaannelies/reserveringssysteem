@@ -39,8 +39,11 @@ if(isset($_POST['bevestigd'])) {
 
     $number = mysqli_real_escape_string($conn, $_POST['aantal']);
 
+    $knippen = $_POST['behandeling1'];
+    $verven = $_POST['behandeling2'];
 
-    $toevoegen = "INSERT INTO reserveringen(voornaam, achternaam, datum, tijd, telefoon, aantal_personen) VALUES('$firstname', '$lastname', '$date', '$time', '$tel', '$number')";
+
+    $toevoegen = "INSERT INTO reserveringen(voornaam, achternaam, datum, tijd, telefoon, aantal_personen, behandelingen) VALUES('$firstname', '$lastname', '$date', '$time', '$tel', '$number', '$knippen')";
 
 
     $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)

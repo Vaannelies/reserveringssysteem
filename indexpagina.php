@@ -6,6 +6,8 @@
  * Time: 15:04
  */
 $aantalpersonen = $_POST['aantal'];
+$knippen = $_POST['behandeling1'];
+$verven = $_POST['behandeling2'];
 
     if($aantalpersonen == 1) {
         echo "U wilt voor " . $aantalpersonen . " persoon reserveren.";
@@ -46,8 +48,10 @@ $aantalpersonen = $_POST['aantal'];
         <input type="time" name="tijd" min="18:30" max="20:30" required>  Kies een tijd tussen 18:30 uur en 20:30 uur.<br>
         Telefoonnummer: <br>
         <input type="text" name="telefoon" maxlength="20" required><br>
-        Aantal personen: <br>
-        <input type="number" name="aantal" min="1" max="10" required><br>
+    <!--    Aantal personen: <br> -->
+        <input type="hidden" name="aantal" min="1" max="10" value="<?= $aantalpersonen ?>" required><br>
+        <input type="hidden" name="behandeling1" value="<?= $knippen ?>"<br>
+        <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
 
 
         Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> algemene voorwaarden</a>:

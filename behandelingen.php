@@ -21,8 +21,10 @@ $aantalpersonen = $_POST['aantal']
 
 <body>
 
-    <form action="indexpagina.php" method="post">
+    <!-- form action="indexpagina.php" method="post">
         Kies uw behandeling:<br>
+
+
 
         <?php
         for($i = 0; $i < $aantalpersonen; $i++){ ?>
@@ -38,6 +40,20 @@ $aantalpersonen = $_POST['aantal']
         }
 
         ?>
+
+-->
+        <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
+
+        <input type="submit" name="bevestigd" value="Bevestigen">
+
+    </form>
+
+
+    <form action="indexpagina.php" method="post">
+        Knippen:
+        <input type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0"> <br>
+        Verven:
+        <input type="number" name="behandeling2" min="0" max="<?=$aantalpersonen?>" value="0"> <br>
         <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
 
         <input type="submit" name="bevestigd" value="Bevestigen">
