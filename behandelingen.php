@@ -17,6 +17,7 @@ $aantalpersonen = $_POST['aantal']
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reserveren bij Christa</title>
+    <style><?php include 'stylesheet_forms.css'; ?></style>
 </head>
 
 <body>
@@ -41,19 +42,21 @@ $aantalpersonen = $_POST['aantal']
 
         ?>
 
--->
         <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
 
         <input type="submit" name="bevestigd" value="Bevestigen">
 
-    </form>
+    </form> -->
 
 
     <form action="indexpagina.php" method="post">
         Knippen:
-        <input type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0"> <br>
+        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
+         <br>
         Verven:
-        <input type="number" name="behandeling2" min="0" max="<?=$aantalpersonen?>" value="0"> <br>
+        <input id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenTwee()"> <span id="answerTwo">personen</span>
+         <br>
+
         <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
 
         <input type="submit" name="bevestigd" value="Bevestigen">
@@ -61,7 +64,40 @@ $aantalpersonen = $_POST['aantal']
     </form>
 
 
+    <script>
 
+
+
+        function functiePersonenEen()
+        {
+            var a=document.getElementById("behand1").value;
+
+            if (a=="1")
+            {
+                document.getElementById("answer").innerText="persoon";
+            }
+            else
+            {
+                document.getElementById("answer").innerHTML="personen";
+            }
+        }
+
+        function functiePersonenTwee()
+        {
+            var a=document.getElementById("behand2").value;
+
+            if (a=="1")
+            {
+                document.getElementById("answerTwo").innerText="persoon";
+            }
+            else
+            {
+                document.getElementById("answerTwo").innerHTML="personen";
+            }
+        }
+
+
+    </script>
 </body>
 
 </html>
