@@ -38,7 +38,14 @@
 
     </form>
 
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
 
+
+<button onclick="goBack()">Terug</button>
 
 </body>
 

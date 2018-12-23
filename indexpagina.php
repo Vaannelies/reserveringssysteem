@@ -121,6 +121,7 @@ else{
 
     </form>
 
+<button onclick="goBack()">Terug</button>
 
 
 <!--
