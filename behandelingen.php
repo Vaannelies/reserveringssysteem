@@ -51,10 +51,18 @@ $aantalpersonen = $_POST['aantal']
         <input type="submit" name="bevestigd" value="Bevestigen">
 
     </form> -->
+<?php
+if($aantalpersonen == 1) {
+    echo "U wilt voor " . $aantalpersonen . " persoon reserveren.";
+}
 
+else{
+    echo "U wilt voor " . $aantalpersonen . " personen reserveren.";
+}
+?>
 
     <form action="indexpagina.php" method="post">
-
+        <br>
         Knippen:
         <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
          <br>
@@ -102,7 +110,7 @@ $aantalpersonen = $_POST['aantal']
             }
         }
 
-        
+
         function goBack() {
             window.history.back();
         }
