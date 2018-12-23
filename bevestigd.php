@@ -43,7 +43,7 @@ if(isset($_POST['bevestigd'])) {
     $verven = $_POST['behandeling2'];
 
 
-    $toevoegen = "INSERT INTO reserveringen(voornaam, achternaam, datum, tijd, telefoon, aantal_personen, behandelingen) VALUES('$firstname', '$lastname', '$date', '$time', '$tel', '$number', '$knippen')";
+    $toevoegen = "INSERT INTO reserveringen(voornaam, achternaam, datum, tijd, telefoon, aantal_personen, behandeling1, behandeling2) VALUES('$firstname', '$lastname', '$date', '$time', '$tel', '$number', '$knippen', '$verven')";
 
 
     $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)
