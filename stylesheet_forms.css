@@ -1,4 +1,8 @@
 .text-box {
     border-radius: 10px;
-    height:25px;
+    height:27px;
+}
+
+body{
+    font-family:arial;
 }

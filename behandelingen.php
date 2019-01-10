@@ -5,7 +5,7 @@
  * Date: 10-12-2018
  * Time: 15:04
  */
-$aantalpersonen = $_POST['aantal']
+$amount = $_POST['amount']
 ?>
 
 <!doctype html>
@@ -32,7 +32,7 @@ $aantalpersonen = $_POST['aantal']
 
 
         <?php
-        for($i = 0; $i < $aantalpersonen; $i++){ ?>
+        for($i = 0; $i < $amount; $i++){ ?>
         <p>Persoon <?= $i ?></p>
         <select name="<?= "behandeling".$i ?>" size="10">
             <option value="knippen">Knippen</option>
@@ -46,33 +46,33 @@ $aantalpersonen = $_POST['aantal']
 
         ?>
 
-        <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
+        <input type="hidden" name="aantal" value="<?= $amount ?>">
 
         <input type="submit" name="bevestigd" value="Bevestigen">
 
     </form> -->
 <?php
-if($aantalpersonen == 1) {
-    echo "U wilt voor " . $aantalpersonen . " persoon reserveren.";
+if($amount == 1) {
+    echo "U wilt voor " . $amount . " persoon reserveren.";
 }
 
 else{
-    echo "U wilt voor " . $aantalpersonen . " personen reserveren.";
+    echo "U wilt voor " . $amount . " personen reserveren.";
 }
 ?>
 
     <form action="indexpagina.php" method="post">
         <br>
         Knippen:
-        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
+            <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
          <br>
         Verven:
-        <input id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$aantalpersonen?>" value="0" onclick="functiePersonenTwee()"> <span id="answerTwo">personen</span>
+        <input id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenTwee()"> <span id="answerTwo">personen</span>
          <br>
 
-        <input type="hidden" name="aantal" value="<?= $aantalpersonen ?>">
+        <input type="hidden" name="amount" value="<?= $amount ?>">
 
-        <input type="submit" name="bevestigd" value="Bevestigen">
+        <input type="submit" name="confirmed" value="Bevestigen">
 
     </form>
 <p>Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!</p>

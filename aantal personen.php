@@ -32,11 +32,29 @@
 
     <form action="behandelingen.php" method="post">
 
-        <input class="text-box" type="number" name="aantal" min="1" max="10" value="1" required> Maximaal 10 personen <br>
+        <input class="text-box" type="number" name="amount" min="1" max="10" value="1" required> Maximaal 10 personen <br>
         
-        <input type="submit" name="bevestigd" value="Bevestigen">
+        <input type="submit" name="confirmed" value="Bevestigen">
 
     </form>
+
+
+
+
+
+<br><br>
+Test optie 2:
+
+<form action="behandelingenV2.php" method="post">
+
+    <input class="text-box" type="number" name="amount" min="1" max="10" value="1" required> Maximaal 10 personen <br>
+
+    <input type="submit" name="confirmed" value="Bevestigen">
+
+</form>
+
+
+
 
 <script>
     function goBack() {

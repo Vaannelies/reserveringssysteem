@@ -14,6 +14,11 @@ $dbName = "reserveringssysteemtest";
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName)
 or die('Error '.mysqli_connect_error());
 
+
+
+
+
+
 $ophalen = "SELECT * FROM reserveringen";
 
 $ophalenuitvoeren = mysqli_query($conn,$ophalen)
@@ -25,25 +30,33 @@ or die('Error '.mysqli_error($conn).'<br> Query:'.$ophalen);
 
 
 
-if(isset($_POST['bevestigd'])) {
+if(isset($_POST['confirmed'])) {
 
-    $firstname = mysqli_real_escape_string($conn, $_POST['voornaam']);
+    $firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
 
-    $lastname = mysqli_real_escape_string($conn, $_POST['achternaam']);
+    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
 
-    $date =  mysqli_real_escape_string($conn, $_POST['datum']);
+    $date =  mysqli_real_escape_string($conn, $_POST['date']);
 
-    $time =  mysqli_real_escape_string($conn, $_POST['tijd']);
+    $time =  mysqli_real_escape_string($conn, $_POST['time']);
 
-    $tel =  mysqli_real_escape_string($conn, $_POST['telefoon']);
+    $phone =  mysqli_real_escape_string($conn, $_POST['phone']);
 
-    $number = mysqli_real_escape_string($conn, $_POST['aantal']);
+    $amount = mysqli_real_escape_string($conn, $_POST['amount']);
+
+    $street = mysqli_real_escape_string($conn, $_POST['street']);
+
+    $housenumber = mysqli_real_escape_string($conn, $_POST['housenumber']);
+
+    $city = mysqli_real_escape_string($conn, $_POST['city']);
+
+
 
     $knippen = $_POST['behandeling1'];
     $verven = $_POST['behandeling2'];
 
 
-    $toevoegen = "INSERT INTO reserveringen(voornaam, achternaam, datum, tijd, telefoon, aantal_personen, behandeling1, behandeling2) VALUES('$firstname', '$lastname', '$date', '$time', '$tel', '$number', '$knippen', '$verven')";
+    $toevoegen = "INSERT INTO reserveringen(firstname, lastname, date, time, phone, amount, behandeling1, behandeling2, street, housenumber, city) VALUES('$firstname', '$lastname', '$date', '$time', '$phone', '$amount', '$knippen', '$verven', '$street', '$housenumber','$city')";
 
 
     $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)

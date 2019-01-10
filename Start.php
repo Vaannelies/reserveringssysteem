@@ -5,7 +5,7 @@
  * Date: 23-12-2018
  * Time: 13:46
  */
-
+    session_start();
 ?>
 
 <!doctype html>
@@ -25,6 +25,19 @@
     </div>
 
     <button onclick="window.location.href = 'aantal personen.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> Reserveren </button>
+
+    <?php
+
+
+    //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.
+    if (!isset($_SESSION['username'])){ ?>
+        <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> login </button>
+      <?php } else { ?>
+        <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> logout </button>
+   <?php }
+
+    ?>
+
 
 </body>
 </html>
