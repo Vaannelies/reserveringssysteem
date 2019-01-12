@@ -124,8 +124,8 @@ else{
         <select name="city">
             <option value="Krimpen aan den IJssel">Krimpen aan den IJssel</option>
             <option value="Capelle aan den IJssel">Capelle aan den IJssel</option>
-            <option value="Krimpen aan de Lek">Nog een optie</option>
-            <option value="Lekkerkerk">Nog een optie2</option>
+            <option value="Krimpen aan de Lek">Krimpen aan de Lek</option>
+            <option value="Lekkerkerk">Lekkerkerk</option>
         </select>
         <div class="tooltip">i
             <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
