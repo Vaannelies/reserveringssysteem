@@ -31,9 +31,10 @@
 
     //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.
     if (!isset($_SESSION['username'])){ ?>
-        <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> login </button>
+        <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> Log in </button>
       <?php } else { ?>
-        <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> logout </button>
+        <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> Log uit</button>
+        <button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 100px; margin-left: 20%;"> Reserveringen bekijken </button>
    <?php }
 
     ?>
