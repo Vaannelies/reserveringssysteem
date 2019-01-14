@@ -85,7 +85,7 @@ else{
             </div>
             <br>
 
-        Datum:<br>
+        Datum van afspraak:<br>
         <input class="text-box" type="date" name="date" required>
           <div class="tooltip">i
           <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
@@ -141,7 +141,7 @@ else{
         <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
 
 
-        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> algemene voorwaarden</a>:
+        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"  target="_blank"> algemene voorwaarden</a>:
         <input type="checkbox" name="check" required> <br><br>
 
         <input type="submit" name="confirmed" value="Bevestigen">
