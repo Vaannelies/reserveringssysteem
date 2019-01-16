@@ -23,6 +23,11 @@ session_start();
 
 <body>
 
+<header>
+
+    <button onclick="window.location.href = 'Start.php';" style="border-radius:5px; width:300px; height: 40px; font-size: 16px; margin-left: 20%;"> Terug naar startpagina </button>
+</header>
+
 <?php
 
     //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.

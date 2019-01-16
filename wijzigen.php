@@ -8,6 +8,11 @@
 
 
 include 'connect_db.php';
+session_start();
+
+if (!isset($_SESSION['username'])){
+    header('Location: Start.php');
+} else {
 
 
 
@@ -44,50 +49,51 @@ $city = $row['city'];
 <h1><?=$firstname?> <?=$lastname?>  wijzigen</h1>
 <br>
 <br>
-<form action="bevestigd_wijzigen.php" method="post" required>
+<form action="bevestigd_wijzigen.php" method="post">
     Voornaam:
     <input type="text" name="firstname" value="<?=$firstname?>" required><br>
 
     Achternaam:
-    <input type="text" name="lastname" value="<?= $lastname?>"required><br>
+    <input type="text" name="lastname" value="<?= $lastname?>" required><br>
 
     Tijd:
     <input type="time" name="time" min="18:30" max="20:30" value="<?=$time?>" required>  Kies een tijd tussen 18:30 uur en 20:30 uur. <br>
 
     Datum van afspraak:
-    <input type="date" name="date" value="<?=$date?>"required><br>
+    <input type="date" name="date" value="<?=$date?>" required><br>
 
     Telefoonnummer:
-    <input type="text" name="phone" value="<?=$phone?>"required><br>
+    <input type="text" name="phone" value="<?=$phone?>" required><br>
 
     Aantal personen:
-    <input type="text" name="amount" value="<?=$amount?>"required><br>
+    <input type="text" name="amount" value="<?=$amount?>" required><br>
 
     Aantal mensen knippen:
-    <input type="text" name="behandeling1" value="<?=$behandeling1?>"required><br>
+    <input type="text" name="behandeling1" value="<?=$behandeling1?>" required><br>
 
     Aantal mensen verven:
-    <input type="text" name="behandeling2" value="<?=$behandeling2?>"required><br>
+    <input type="text" name="behandeling2" value="<?=$behandeling2?>" required><br>
 
     Straatnaam:
-    <input type="text" name="street" value="<?=$street?>"required><br>
+    <input type="text" name="street" value="<?=$street?>" required><br>
 
     Huisnummer:
-    <input type="text" name="housenumber" value="<?=$housenumber?>"required><br>
+    <input type="text" name="housenumber" value="<?=$housenumber?>" required><br>
 
     Plaats:
-    <input type="text" name="city" value="<?=$city?>"required><br>
+    <input type="text" name="city" value="<?=$city?>" required><br>
 
     <input type="hidden" name="id" value="<?=$id?>">
 
-    <input type="submit" value="Verzenden">
+    <input type="submit" name="submit" value="Verzenden">
 
 
 
 </form>
 
 
-
+<button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 100px; margin-left: 20%;"> Terug naar reserveringen </button>
 
 </body>
 </html>
+<?php } ?>

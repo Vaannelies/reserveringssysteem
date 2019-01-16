@@ -6,6 +6,10 @@
  * Time: 21:27
  * */
 include 'connect_db.php';
+session_start();
+if (!isset($_SESSION['username'])){
+    header('Location: Start.php');
+} else {
 
 $id = $_POST['reservering'];
 
@@ -13,7 +17,7 @@ $id = $_POST['reservering'];
 $select = "SELECT * FROM reserveringen WHERE id = $id";
 
 $results = mysqli_query($conn,$select)
-or die('Error ' . mysqli_error($conn) . '<br> Query:' . $query);
+or die('Error ' . mysqli_error($conn) . '<br> Query:' . $select);
 $row = $results->fetch_assoc();
 
 
@@ -39,3 +43,5 @@ Weet u zeker dat u de reservering van <?=$row['firstname']?> <?=$row['lastname']
 </form>
 
 <button onclick="goBack()">Nee</button>
+
+<?php } ?>
