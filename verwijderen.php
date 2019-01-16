@@ -31,9 +31,11 @@ Weet u zeker dat u de reservering van <?=$row['firstname']?> <?=$row['lastname']
 </script>
 
 
-<button onclick="goBack()">Nee</button>
+
 
 <form action="bevestigd_verwijderen.php" method="post">
     <input type="hidden" name="reservering" value="<?=$id?>">
     <input type="submit" value="Ja">
 </form>
+
+<button onclick="goBack()">Nee</button>
