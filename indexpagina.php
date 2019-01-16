@@ -72,7 +72,7 @@ else{
     <form action="bevestigd.php" method="post">
         <br>
         Voornaam:<br>
-        <input class="text-box" type="text" name="firstname" maxlength="50"" required>
+        <input class="text-box" type="text" name="firstname" maxlength="50" required>
             <div class="tooltip">i
             <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
             </div>
@@ -85,19 +85,36 @@ else{
             </div>
             <br>
 
+      <!--  Tijd van afspraak:<br>
+        <input class="text-box" type="time" name="time" min="18:30" max="20:30" required>  Kies een tijd tussen 18:30 uur en 20:30 uur.
+        <div class="tooltip">i
+            <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
+        </div>
+        <br>-->
+        
         Datum van afspraak:<br>
+        <input type="date" name="date" id="date"/>
+        <div class="tooltip">i
+            <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
+        </div>
+        <br>
+
+
+        Tijd van afspraak:<br>
+        <select name="time" id="time">
+            <option value="">Selecteer eerst een datum</option>
+        </select>
+        <div class="tooltip">i
+            <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
+        </div>  Kies een tijd tussen 18:30 uur en 20:30 uur.
+        <br>
+
+      <!--  Datum van afspraak:<br>
         <input class="text-box" type="date" name="date" required>
           <div class="tooltip">i
           <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
           </div>
-          <br>
-
-        Tijd:<br>
-        <input class="text-box" type="time" name="time" min="18:30" max="20:30" required>  Kies een tijd tussen 18:30 uur en 20:30 uur.
-          <div class="tooltip">i
-          <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
-          </div>
-          <br>
+          <br> -->
 
         Telefoonnummer: <br>
         <input class="text-box" type="text" name="phone" maxlength="20" required>
@@ -173,7 +190,11 @@ $("#datepicker").val($.datepicker.formatDate('mm/dd/yy', tomorrow));
 <p>Date: <input type="text" id="datepicker"></p>
 -->
 
-
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="main.js"></script>
 
 </body>
 
