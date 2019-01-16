@@ -7,29 +7,22 @@
  * */
 include 'connect_db.php';
 
- $id = $_POST['reservering'];
+$id = $_POST['reservering'];
 
 
-$ophalen = "SELECT * FROM reserveringen WHERE id = $id";
+$select = "SELECT * FROM reserveringen WHERE id = $id";
 
-
-$gegevens = mysqli_query($conn, $ophalen)
-or die('Error ' . mysqli_error($conn) . '<br> Query:' . $query);          //reserveringen opgehaald
-
-$reserveringen = [];                                                //array ervoor gemaakt
-
+$results = mysqli_query($conn,$select)
+or die('Error ' . mysqli_error($conn) . '<br> Query:' . $query);
+$row = $results->fetch_assoc();
 
 
 
 
-
-while ($row = mysqli_fetch_array($gegevens)) {
-    $reserveringen [] = $row;
-}
 
 ?>
 
-Weet je zeker dat je de reservering van <?=$reserveringen['firstname']?> <?=$reserveringen['lastname']?> wil verwijderen?
+Weet u zeker dat u de reservering van <?=$row['firstname']?> <?=$row['lastname']?> wilt verwijderen?
 
 <script>
     function goBack() {
@@ -41,6 +34,6 @@ Weet je zeker dat je de reservering van <?=$reserveringen['firstname']?> <?=$res
 <button onclick="goBack()">Nee</button>
 
 <form action="bevestigd_verwijderen.php" method="post">
-    <input type="hidden" name="id" value="<?=$id?>">
+    <input type="hidden" name="reservering" value="<?=$id?>">
     <input type="submit" value="Ja">
 </form>

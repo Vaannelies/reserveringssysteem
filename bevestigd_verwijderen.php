@@ -5,7 +5,7 @@ include 'connect_db.php';
 
 $id = $_POST['reservering'];
 
-$delete_query = "DELETE FROM reserveringen WHERE ID ='". $id . "'";
+$delete_query = "DELETE FROM reserveringen WHERE id = $id";
 
 
 
