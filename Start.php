@@ -26,8 +26,9 @@
     </div>
 
     <div class="afbeeldingen">
+
+        <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
         <img src="https://images3.persgroep.net/rcs/RLZJ94jTZb6ZaTG-SYjDuVCX9z0/diocontent/112673080/_crop/0/0/1671/944/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8">
-        <img src="https://www.meandergroep.com/storage/pages/42e138aea93d344b80936e23b9a126eb06e767c4.jpg">
         <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
 
     </div>
