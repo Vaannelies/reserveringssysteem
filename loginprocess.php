@@ -5,15 +5,7 @@
  * Date: 9-1-2019
  * Time: 12:36
  */
-
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "reserveringssysteemtest";
-
-$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName)
-or die('Error '.mysqli_connect_error());
-
+include 'connect_db.php';
 session_start();
 
 if (isset($_POST)) {
@@ -34,6 +26,7 @@ if (isset($_POST)) {
 
     } else {
         header('Location: login.php');
+
     }
 
 }
