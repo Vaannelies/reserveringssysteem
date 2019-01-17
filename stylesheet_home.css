@@ -65,7 +65,7 @@ button.reserveren-button{
     height: 80px;
     font-size: 35px;
     margin-top: 0px;
-    background-color:blue;
+    background-color:black;
     color:white;
 
 
@@ -73,4 +73,11 @@ button.reserveren-button{
 
 body{
     font-family: Arial;
+}
+
+div.titel{
+left: 0;
+right:0;
+
+
 }

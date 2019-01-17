@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="stylesheet_home.css">
 </head>
 <body>
+
     <div class="titel" style="border-style:solid; border-color: lightgrey; width:100vw; background-color: gray;">
         <h1 style="color:white; margin-left:50px; font-family: arial;">
             Christa
@@ -33,6 +34,7 @@
 
     </div>
 
+    <section id="boxes">
     <div class="informatie">
 
         <div class="info">
@@ -51,7 +53,7 @@
         </div>
 
 
-        <div class="contact_info">
+        <div class="info"> <!--contact heb ik weggeveegd-->
             <h2>Contactinformatie</h2>
             <p>Hanc tibi Priamides mitto, Ledaea, salutem,
                 quae tribui sola te mihi dante potest.
@@ -71,6 +73,7 @@
                 hoc mihi quae suasit, mater Amoris, iter.</p>
         </div>
     </div>
+    </section>
 
     <div class="reserveren">
     <button class="reserveren-button" onclick="window.location.href = 'aantal personen.php'" > Reserveren </button>
@@ -84,8 +87,10 @@
         <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
         </footer>
       <?php } else { ?>
-        <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 300px; margin-left: 20%;"> Log uit</button>
-        <button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 100px; margin-left: 20%;"> Reserveringen bekijken </button>
+        <footer>
+        <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Log uit</button>
+        <button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:200px; height: 30px; font-size: 16px; margin-left: 20px;"> Reserveringen bekijken </button>
+        </footer>
    <?php }
 
     ?>
