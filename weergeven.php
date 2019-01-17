@@ -90,6 +90,7 @@ session_start();
                 <td><?=$reservering['city']?></td>
                 <td style="border-left:solid 1px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen"></form></td>
                 <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Wijzigen"></form></td>
+                <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Details"></form></td>
 
             </tr>
 
