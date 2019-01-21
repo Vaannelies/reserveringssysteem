@@ -10,6 +10,7 @@ include 'connect_db.php';
 session_start();
 
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,21 +20,44 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet_weergeven.css">
+    <link rel="stylesheet" href="stylesheet_home.css">
 </head>
-
-<body>
-
-<header>
-
-    <button onclick="window.location.href = 'Start.php';" style="border-radius:5px; width:300px; height: 40px; font-size: 16px; margin-left: 20%;"> Terug naar startpagina </button>
-</header>
-
 <?php
 
     //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.
     if (!isset($_SESSION['username'])){
         header('Location: Start.php');
-    } else {
+    } else { ?>
+<body>
+
+<header>
+
+    <div class="titel">
+        <h1 style="color:white; margin-left:50px; font-family: arial;">
+            Christa
+        </h1>
+    </div>
+    <div class="ondertitel">
+        <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
+            Reserveringen
+            <button onclick="window.location.href = 'Start.php';"
+                    style="border-radius:5px;
+                    width:300px; height: 30px;
+                    font-size: 16px; margin-left: 20%;">
+                Terug naar startpagina </button>
+            <button onclick="window.location.href = 'logout.php';"
+                    style="border-radius:5px;
+                    width:100px; height: 30px;
+                     font-size: 16px; margin-left: 20px;">
+                Log uit</button>
+        </h1>
+
+    </div>
+
+</header>
+
+<?php
+
 
         $ophalen = "SELECT * FROM reserveringen ORDER BY id DESC";
 
@@ -61,7 +85,7 @@ session_start();
                 <th>Voornaam</th>
                 <th>Achternaam</th>
                 <th>Tijd</th>
-                <th>Datum</th>
+                <th>Datum</th> <!--
                 <th>Telefoonnummer</th>
                 <th>Aantal personen</th>
                 <th>Knippen</th>
@@ -71,6 +95,7 @@ session_start();
                 <th>Huisnummer</th>
                 <th>Plaats</th>
             </tr>
+            -->
         <?php
 
         foreach ($reserveringen as $reservering) {
@@ -80,6 +105,7 @@ session_start();
                 <td><?=$reservering['lastname']?></td>
                 <td><?=$reservering['time']?></td>
                 <td><?=$reservering['date']?></td>
+                <!--
                 <td><?=$reservering['phone']?></td>
                 <td><?=$reservering['amount']?></td>
                 <td class="behand_left"><?=$reservering['behandeling1']?></td>
@@ -87,8 +113,8 @@ session_start();
                 <td class="behand_right">= <?=$reservering['behandeling1'] + $reservering['behandeling2']?></td>
                 <td><?=$reservering['street']?></td>
                 <td><?=$reservering['housenumber']?></td>
-                <td><?=$reservering['city']?></td>
-                <td style="border-left:solid 1px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen"></form></td>
+                <td><?=$reservering['city']?></td> -->
+                <td style="border-left:solid 2px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen"></form></td>
                 <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Wijzigen"></form></td>
                 <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Details"></form></td>
 
