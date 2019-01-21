@@ -20,7 +20,7 @@
 </head>
 <body>
 
-    <div class="titel" style="border-style:solid; border-color: lightgrey; width:100vw; background-color: gray;">
+    <div class="titel">
         <h1 style="color:white; margin-left:50px; font-family: arial;">
             Christa
         </h1>

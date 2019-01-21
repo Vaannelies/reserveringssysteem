@@ -73,11 +73,24 @@ button.reserveren-button{
 
 body{
     font-family: Arial;
+    margin-left: 0;
 }
 
 div.titel{
 left: 0;
 right:0;
+    border:solid 1px black;
+    width:100vw;
+    background-color: gray;
+margin-top:-8px;
+}
+
+div.ondertitel{ border:solid 1px black;
+    height: 50px;
+    width:100vw;
+    background-color: darkgrey;
+
 
 
 }
+
