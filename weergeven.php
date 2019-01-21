@@ -119,9 +119,9 @@ session_start();
                 <td><?=$reservering['street']?></td>
                 <td><?=$reservering['housenumber']?></td>
                 <td><?=$reservering['city']?></td> -->
-                <td style="border-left:solid 2px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen"></form></td>
-                <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Wijzigen"></form></td>
-                <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Details"></form></td>
+                <td style="border-left:solid 2px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen" style="border-radius: 8px; font-size:18px; color:white; background-color:indianred;"></form></td>
+                <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Wijzigen" style="border-radius: 8px; font-size:18px;"></form></td>
+                <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Details" style="border-radius: 8px; font-size:18px;"></form></td>
 
             </tr>
 
