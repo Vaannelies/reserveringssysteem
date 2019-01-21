@@ -36,15 +36,18 @@ if (!isset($_SESSION['username'])){
     $city = $row['city'];
 
 
-}
     ?>
 
-<h1>Reservering op <?=$date?> om <?=$time?></h1>
-<p>Voornaam: <?=$firstname?><br>
-Achternaam: <?=$lastname?><br>
-Telefoonnummer:<?=$phone?><br>
-Aantal personen: <?=$amount?><br>
-Aantal mensen knippen: <?=$behandeling1?><br>
-Aantal mensen verven: <?=$behandeling2?><br>
-Adres: <?=$street?> <?=$housenumber?><br>
-Plaats: <?=$city?></p>
+    <h1>Reservering op <?= $date ?> om <?= $time ?> uur.</h1>
+    <p><?= $firstname ?> <?= $lastname ?><br><br>
+        Telefoonnummer:<?= $phone ?><br>
+        Adres: <?= $street ?> <?= $housenumber ?><br>
+        Plaats: <?= $city ?></p>
+
+    Aantal personen: <?= $amount ?><br>
+    Aantal mensen knippen: <?= $behandeling1 ?><br>
+    Aantal mensen verven: <?= $behandeling2 ?><br>
+
+    <?php
+
+}?>
