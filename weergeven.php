@@ -39,17 +39,22 @@ session_start();
     </div>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
-            Reserveringen
+        Reserveringen
+        </h1>
+        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+
+          <!--  <div style="margin-left:60%;"> -->
             <button onclick="window.location.href = 'Start.php';"
                     style="border-radius:5px;
-                    width:300px; height: 30px;
-                    font-size: 16px; margin-left: 20%;">
+                    width:200px; height: 30px;
+                    font-size: 16px;">
                 Terug naar startpagina </button>
             <button onclick="window.location.href = 'logout.php';"
                     style="border-radius:5px;
                     width:100px; height: 30px;
-                     font-size: 16px; margin-left: 20px;">
+                     font-size: 16px;">
                 Log uit</button>
+           <!-- </div> -->
         </h1>
 
     </div>
