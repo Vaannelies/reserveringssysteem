@@ -74,11 +74,12 @@
     if (!isset($_SESSION['username'])){ ?>
         <footer>
         <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
-        </footer>
+        <a style="color:#313131; display:flex; justify-content:center; margin-top:-22px;" href="algemene_voorwaarden.html">Algemene voorwaarden</a>
       <?php } else { ?>
         <footer>
         <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Log uit</button>
         <button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:200px; height: 30px; font-size: 16px; margin-left: 20px;"> Reserveringen bekijken </button>
+        <a style="color:#313131; display:flex; justify-content:center; margin-top:-22px;" href="algemene_voorwaarden.html">Algemene voorwaarden</a>
         </footer>
    <?php }
 
