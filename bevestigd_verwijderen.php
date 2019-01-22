@@ -46,7 +46,12 @@ else{
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Verwijderen
             </h1>
-
+            <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+                <button onclick="window.location.href = 'logout.php';"
+                        style="border-radius:5px;
+                    width:100px; height: 30px;
+                     font-size: 16px;">
+                    Log uit</button></h1>
 
         </div>
 

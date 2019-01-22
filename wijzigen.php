@@ -43,57 +43,101 @@ $city = $row['city'];
 
 <html>
 
+<head>
+    <link rel="stylesheet" href="stylesheet_home.css">
+    <link rel="stylesheet" href="stylesheet_forms.css">
+</head>
 
 <body>
 
-<h1><?=$firstname?> <?=$lastname?>  wijzigen</h1>
+<header>
+
+    <div class="titel">
+        <h1 style="color:white; margin-left:50px; font-family: arial;">
+            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
+        </h1>
+    </div>
+    <div class="ondertitel">
+        <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
+            Reservering wijzigen
+        </h1>
+        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+
+
+            <!--  <div style="margin-left:60%;"> -->
+            <button onclick="goBack()" style="border-radius:5px;
+                    width:100px; height: 30px;
+                     font-size: 16px;">Terug</button>
+            <button onclick="window.location.href = 'logout.php';"
+                    style="border-radius:5px;
+                    width:100px; height: 30px;
+                     font-size: 16px;">
+                Log uit</button>
+            <!-- </div> -->
+        </h1>
+
+    </div>
+    <div style="margin-left:50px;">
+
+        <h1>De reservering van <?=$firstname?> <?=$lastname?>  wijzigen</h1>
+    </div>
+</header>
+
 <br>
 <br>
-<form action="bevestigd_wijzigen.php" method="post">
+<div style="margin-left: 50px;">
+    <div >
+<form action="bevestigd_wijzigen.php" method="post" style="display:flex; justify-content:flex-end; flex-direction:column; width:400px;">
     Voornaam:
-    <input type="text" name="firstname" value="<?=$firstname?>" required><br>
+    <input class="text-box" type="text" name="firstname" value="<?=$firstname?>" required><br><br>
 
     Achternaam:
-    <input type="text" name="lastname" value="<?= $lastname?>" required><br>
+    <input class="text-box" type="text" name="lastname" value="<?= $lastname?>" required><br><br>
 
     Tijd:
-    <input type="time" name="time" min="18:30" max="20:30" value="<?=$time?>" required>  Kies een tijd tussen 18:30 uur en 20:30 uur. <br>
+    <input class="text-box" type="time" name="time" min="18:30" max="20:30" value="<?=$time?>" required>  Kies een tijd tussen 18:30 uur en 20:30 uur. <br><br>
 
     Datum van afspraak:
-    <input type="date" name="date" value="<?=$date?>" required><br>
+    <input class="text-box" type="date" name="date" value="<?=$date?>" required><br>
 
     Telefoonnummer:
-    <input type="text" name="phone" value="<?=$phone?>" required><br>
+    <input class="text-box" type="text" name="phone" value="<?=$phone?>" required><br>
 
     Aantal personen:
-    <input type="text" name="amount" value="<?=$amount?>" required><br>
+    <input class="text-box" type="text" name="amount" value="<?=$amount?>" required><br>
 
     Aantal mensen knippen:
-    <input type="text" name="behandeling1" value="<?=$behandeling1?>" required><br>
+    <input class="text-box" type="text" name="behandeling1" value="<?=$behandeling1?>" required><br>
 
     Aantal mensen verven:
-    <input type="text" name="behandeling2" value="<?=$behandeling2?>" required><br>
+    <input class="text-box" type="text" name="behandeling2" value="<?=$behandeling2?>" required><br>
 
     Straatnaam:
-    <input type="text" name="street" value="<?=$street?>" required><br>
+    <input class="text-box" type="text" name="street" value="<?=$street?>" required><br>
 
     Huisnummer:
-    <input type="text" name="housenumber" value="<?=$housenumber?>" required><br>
+    <input class="text-box" type="text" name="housenumber" value="<?=$housenumber?>" required><br>
 
     Plaats:
-    <input type="text" name="city" value="<?=$city?>" required><br>
+    <input class="text-box" type="text" name="city" value="<?=$city?>" required><br>
 
-    <input type="hidden" name="id" value="<?=$id?>">
+    <input class="text-box" type="hidden" name="id" value="<?=$id?>">
 
-    <input type="submit" name="submit" value="Verzenden">
+    <input class="text-box" type="submit" name="submit" value="Verzenden">
 
 
 
 </form>
 
+    </div>
 
-<button onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:300px; height: 200px; font-size: 35px; margin-top: 100px; margin-left: 20%;"> Terug naar reserveringen </button>
-
+</div>
 </body>
+<script>
+    function goBack() {
+        window.history.back();
+
+    }
+</script>
 </html>
 <?php } ?>

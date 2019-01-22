@@ -70,7 +70,7 @@ $row = $results->fetch_assoc();
 <br><br>
     <div style="margin-left: 50px;">
     <h1> Weet u zeker dat u de reservering van <?=$row['firstname']?> <?=$row['lastname']?> wilt verwijderen? </h1>
-
+    <div style="display:flex; margin-top:60px;">
     <form action="bevestigd_verwijderen.php" method="post">
         <input type="hidden" name="reservering" value="<?=$id?>">
         <input type="submit" value="Ja" style="border-radius:5px;
@@ -78,8 +78,9 @@ $row = $results->fetch_assoc();
                      font-size: 16px;">
     </form>
     <button onclick="goBack()" style="border-radius:5px;
-                    width:100px; height: 30px;
+                    width:100px; height: 30px; margin-left: 80px;
                      font-size: 16px;">Nee</button>
+    </div>
     </div>
     <script>
         function goBack() {
