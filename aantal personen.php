@@ -21,12 +21,35 @@
     <style>
     <?php include 'stylesheet_forms.css'; ?>
     </style>
+    <link rel="stylesheet" href="stylesheet_home.css">
 </head>
 
 <body>
 <header>
-    <h1>STAP 1</h1>
-    <p>Kies het aantal personen.</p>
+
+    <div class="titel">
+        <h1 style="color:white; margin-left:50px; font-family: arial;">
+            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
+        </h1>
+    </div>
+    <div class="ondertitel">
+        <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
+            STAP 1
+        </h1>
+        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+
+            <!--  <div style="margin-left:60%;"> -->
+            <button  onclick="goBack()"
+                    style="border-radius:5px;
+                    width:200px; height: 30px;
+                    font-size: 16px;">Terug</button>
+
+            <!-- </div> -->
+        </h1>
+
+    </div>
+    <h1>Kies het aantal personen.</h1>
+    <p></p>
 </header>
 
 
@@ -40,7 +63,7 @@
 
 
 
-
+<!--
 
 <br><br>
 Test optie 2:
@@ -52,7 +75,7 @@ Test optie 2:
     <input type="submit" name="confirmed" value="Bevestigen">
 
 </form>
-
+-->
 
 
 
@@ -63,7 +86,6 @@ Test optie 2:
 </script>
 
 
-<button onclick="goBack()">Terug</button>
 
 </body>
 
