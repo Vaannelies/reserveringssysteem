@@ -46,8 +46,9 @@ $amount = $_POST['amount']
         </h1>
 
     </div>
+    <div style="margin-left:50px;">
     <h1>Kies de gewenste behandeling(en).</h1>
-    <p></p>
+    </div>
 </header>
     <!-- form action="indexpagina.php" method="post">
         Kies uw behandeling:<br>
@@ -74,6 +75,7 @@ $amount = $_POST['amount']
         <input type="submit" name="bevestigd" value="Bevestigen">
 
     </form> -->
+<div style="margin-left:50px;">
 <?php
 if($amount == 1) {
     echo "U wilt voor " . $amount . " persoon reserveren.";
@@ -94,11 +96,14 @@ else{
          <br>
 
         <input type="hidden" name="amount" value="<?= $amount ?>">
-
+        <br>
         <input type="submit" name="confirmed" value="Bevestigen">
 
     </form>
-<p>Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!</p>
+    <br>
+Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!
+
+</div>
 
 
     <script>

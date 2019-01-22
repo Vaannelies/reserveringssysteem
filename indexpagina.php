@@ -76,6 +76,7 @@ if ($knippen + $verven < $amount) {
         </h1>
 
     </div>
+    <div style="margin-left:50px;">
     <h1>Vul uw persoonlijke gegevens in.</h1>
     <p></p>
 
@@ -88,8 +89,9 @@ else{
     echo "U wilt voor " . $amount . " personen reserveren.";
 }
 ?>
+    </div>
 
-
+<div style="margin-left: 50px;">
     <form action="bevestigd.php" method="post">
         <br>
         Voornaam:<br>
@@ -188,6 +190,7 @@ else{
     </form>
 
 <button onclick="goBack()">Terug</button>
+</div>
 
 
 <!--
