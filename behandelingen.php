@@ -86,24 +86,53 @@ else{
 }
 ?>
 
+
     <form action="indexpagina.php" method="post">
         <br>
-        Knippen:
-            <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
-         <br>
-        Verven:
-        <input id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenTwee()"> <span id="answerTwo">personen</span>
-         <br>
 
+        <!--Alle behandelingen-->
+        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+            <!--afbeelding en aantal personen -->
+            <div style="display:flex; flex-direction:column; width:150px; text-align:center;">
+                <img style="width:150px;" src="images/knippen.png"><br>
+                Knippen:<br>
+                 <!--aantal personen-->
+                 <div style="display:flex; justify-content:space-evenly;">
+                    <input style="width:30px;" id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()">
+                    <span id="answer" style="padding-top:5px;"> personen</span>
+                 </div>
+            </div>
+            <!--afbeelding en aantal personen -->
+            <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
+                <img style="width:150px;" src="images/verven.png"><br>
+                Verven:
+                 <!--aantal personen-->
+                <div style="display:flex; justify-content:space-evenly;">
+                    <input style="width:30px;" id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenTwee()">
+                    <span id="answerTwo">personen</span>
+                </div>
+            </div>
+        </div>
+
+
+     <!--   Permanent:
+        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
+        <br>
+        Deelpermanent:
+        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
+        <br>
+-->
         <input type="hidden" name="amount" value="<?= $amount ?>">
         <br>
         <input type="submit" name="confirmed" value="Bevestigen">
 
     </form>
     <br>
-Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!
+    Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!
 
 </div>
+
+
 
 
     <script>
