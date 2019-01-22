@@ -96,12 +96,12 @@ if (!isset($_SESSION['username'])){
             </p>
 <br><br><br>
             <h2>Wanneer</h2>
-            <p style="font-size: 30px;"><?= $date ?> om <?= $time ?> uur.</p>
+            <p><?= $date ?> om <?= $time ?> uur.</p>
 
         </div>
 
         <div
-        style="border: solid 1px black; padding: 10px; padding-right: 15px;"> <!-- Reservation stuff -->
+        style="border: solid 1px black; padding: 10px; padding-right: 15px; height:240px;"> <!-- Reservation stuff -->
             <h2 style="text-decoration-line: underline;">To do</h2>
             <p style="text-decoration-line: underline;">  Aantal personen: <?= $amount ?><br><br></p>
             <p style="border-bottom: 1px black solid;"> Van al deze mensen moet u er </p>
