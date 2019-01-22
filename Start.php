@@ -38,46 +38,35 @@
     <div class="informatie">
 
         <div class="info">
-            <h2> je mOeDeR </h2>
-            <p>Hier komt info yo welkom bij christa enzo <br>
-            Christa de gekke thuiskapster, geknipt voor de zaak jwz <br>
-            Christa bezoekt mensen thuis, en alleen als je in een van de volgende plaatsen woont:
+            <h2> Een professionele kapster bij u thuis </h2>
+            <p>Welkom op de website van Christa, een gezellige maar professionele thuiskapster.<br>
+            <br>
+            Als u in een van de volgende plaatsen woont, kunt u een afspraak maken met Christa:
             <ul>
             <li>Krimpen aan den IJssel</li>
             <li>Capelle aan den IJssel</li>
             <li>Krimpen aan de Lek</li>
             <li>Lekkerkerk</li>
             </ul>
-            Als je ergens anders woont, komt Christa niet bij je langs helaas. Om toch een afspraak<br>
-            te maken, moet je haar bezoeken bij Take C'hair in Ridderkerk ofzo doei</p>
+            Wilt u uw afspraak verzetten of afzeggen? Neem dan contact op met Christa.
+           </p>
         </div>
 
 
         <div class="info"> <!--contact heb ik weggeveegd-->
             <h2>Contactinformatie</h2>
-            <p>Hanc tibi Priamides mitto, Ledaea, salutem,
-                quae tribui sola te mihi dante potest.
-                eloquar, an flammae non est opus indice notae,
-                et plus quam vellem, iam meus extat amor?
-                ille quidem lateat malim, dum tempora dentur
-                laetitiae mixtos non habitura metus.
-                sed male dissimulo; quis enim celaverit ignem,
-                lumine qui semper proditur ipse suo?
-                si tamen expectas, vocem quoque rebus ut addam:
-                uror—habes animi nuntia verba mei.
-                parce, precor, fasso, nec vultu cetera duro
-                perlege, sed formae conveniente tuae.
-                iamdudum gratum est, quod epistula nostra recepta
-                spem facit, hoc recipi me quoque posse modo.
-                quae rata sit; nec te frustra promiserit, opto,
-                hoc mihi quae suasit, mater Amoris, iter.</p>
+            <p>E-mail: christadecoolekapster@hotmail.com<br>
+            Telefoon: 0180-482912<br>
+            Adres: van Stratenstraat 138</p>
+            <div class="reserveren">
+                <button class="reserveren-button" onclick="window.location.href = 'aantal personen.php'" > Reserveren </button>
+            </div>
         </div>
     </div>
+
     </section>
 
-    <div class="reserveren">
-    <button class="reserveren-button" onclick="window.location.href = 'aantal personen.php'" > Reserveren </button>
-    </div>
+
     <?php
 
 
