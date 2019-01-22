@@ -94,86 +94,99 @@ else{
 <div style="margin-left: 50px;">
     <form action="bevestigd.php" method="post">
         <br>
-        Voornaam:<br>
-        <input class="text-box" type="text" name="firstname" maxlength="50" required>
+      <div style="display:flex; flex-direction: row; ">
+        <div>
+            Voornaam:<br>
+            <input class="text-box" type="text" name="firstname" maxlength="50" required>
+                <div class="tooltip">i
+                <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
+                </div>
+                <br>
+
+            Achternaam:<br>
+            <input class="text-box" type="text" name="lastname" maxlength="100" required>
+                <div class="tooltip">i
+                <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
+                </div>
+                <br>
+
+          <!--  Tijd van afspraak:<br>
+            <input class="text-box" type="time" name="time" min="18:30" max="20:30" required>  Kies een tijd tussen 18:30 uur en 20:30 uur.
             <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
+                <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
+            </div>
+            <br>-->
+
+          <!--  Datum van afspraak:<br>
+            <input class="text-box" type="date" name="date" required>
+              <div class="tooltip">i
+              <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
+              </div>
+              <br> -->
+
+            Telefoonnummer: <br>
+            <input class="text-box" type="text" name="phone" maxlength="20" required>
+              <div class="tooltip">i
+              <span class="tooltiptext">Dit is nodig om u te kunnen bereiken als dat nodig is.</span>
+              </div>
+              <br>
+
+            Straatnaam:<br>
+            <input class="text-box" type="text" name="street" maxlength="70" required>
+              <div class="tooltip">i
+              <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
+              </div>
+              <br>
+
+            Huisnummer:<br>
+            <input class="text-box" type="text" name="housenumber" maxlength="20" required>
+              <div class="tooltip">i
+              <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
+              </div>
+              <br>
+
+            Plaats: <br>
+            <select class="text-box" name="city";">
+                <option value="Krimpen aan den IJssel">Krimpen aan den IJssel</option>
+                <option value="Capelle aan den IJssel">Capelle aan den IJssel</option>
+                <option value="Krimpen aan de Lek">Krimpen aan de Lek</option>
+                <option value="Lekkerkerk">Lekkerkerk</option>
+            </select>
+            <div class="tooltip">i
+                <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.<br><br>
+                Staat uw plaats er niet bij?<br>
+                Dan is Christa niet beschikbaar in uw plaats.</span>
+            </div>
+            <div class="tooltip" style="background-color:indianred;">?
+                <span class="tooltiptext">
+                Staat uw plaats er niet bij? Dan is Christa niet beschikbaar in uw plaats.</span>
+            </div>
+            <br>
+        </div>
+
+
+        <!--tijdgegevens-->
+        <div style="margin-left:20px;">
+
+            Datum van afspraak:<br>
+            <input type="date" name="date" id="date" class="text-box"/>
+            <div class="tooltip">i
+                <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
             </div>
             <br>
 
-        Achternaam:<br>
-        <input class="text-box" type="text" name="lastname" maxlength="100" required>
+
+            Tijd van afspraak:<br>
+            <select name="time" id="time" class="text-box">
+                <option value="">Selecteer eerst een datum</option>
+            </select>
             <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
+                <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
             </div>
+            Kies een tijd tussen 18:30 uur en 20:30 uur.
             <br>
-
-      <!--  Tijd van afspraak:<br>
-        <input class="text-box" type="time" name="time" min="18:30" max="20:30" required>  Kies een tijd tussen 18:30 uur en 20:30 uur.
-        <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
         </div>
-        <br>-->
-
-        Datum van afspraak:<br>
-        <input type="date" name="date" id="date"/>
-        <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
         </div>
-        <br>
-
-
-        Tijd van afspraak:<br>
-        <select name="time" id="time">
-            <option value="">Selecteer eerst een datum</option>
-        </select>
-        <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om te weten om welke tijd er gereserveerd moet worden.</span>
-        </div>  Kies een tijd tussen 18:30 uur en 20:30 uur.
-        <br>
-
-      <!--  Datum van afspraak:<br>
-        <input class="text-box" type="date" name="date" required>
-          <div class="tooltip">i
-          <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
-          </div>
-          <br> -->
-
-        Telefoonnummer: <br>
-        <input class="text-box" type="text" name="phone" maxlength="20" required>
-          <div class="tooltip">i
-          <span class="tooltiptext">Dit is nodig om u te kunnen bereiken als dat nodig is.</span>
-          </div>
-          <br>
-
-        Straatnaam <br>
-        <input class="text-box" type="text" name="street" maxlength="70" required>
-          <div class="tooltip">i
-          <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
-          </div>
-          <br>
-
-        Huisnummer <br>
-        <input class="text-box" type="text" name="housenumber" maxlength="20" required>
-          <div class="tooltip">i
-          <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
-          </div>
-          <br>
-
-        Plaats <br>
-        <select name="city">
-            <option value="Krimpen aan den IJssel">Krimpen aan den IJssel</option>
-            <option value="Capelle aan den IJssel">Capelle aan den IJssel</option>
-            <option value="Krimpen aan de Lek">Krimpen aan de Lek</option>
-            <option value="Lekkerkerk">Lekkerkerk</option>
-        </select>
-        <div class="tooltip">i
-            <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
-        </div>
-        <br>
-
-
-
         <!--    Aantal personen             -->
         <input type="hidden" name="amount" min="1" max="10" value="<?= $amount ?>" required><br>
     <!--    De behandelingen en hoevaak -->
