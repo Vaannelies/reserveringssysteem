@@ -34,7 +34,7 @@ session_start();
 
     <div class="titel">
         <h1 style="color:white; margin-left:50px; font-family: arial;">
-            Christa
+            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
         </h1>
     </div>
     <div class="ondertitel">
