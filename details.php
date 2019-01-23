@@ -104,7 +104,7 @@ if (!isset($_SESSION['username'])){
         style="border: solid 1px black; padding: 10px; padding-right: 15px; height:240px;"> <!-- Reservation stuff -->
             <h2 style="text-decoration-line: underline;">To do</h2>
             <p style="text-decoration-line: underline;">  Aantal personen: <?= $amount ?><br><br></p>
-            <p style="border-bottom: 1px black solid;"> Van al deze mensen moet u er </p>
+            <p style="border-bottom: 1px black solid;"> Van al deze mensen moet u er: </p>
             <p style="border-bottom: 1px black solid;">    <?= $behandeling1 ?> knippen</p>
             <p style="border-bottom: 1px black solid;"> <?= $behandeling2 ?> verven<br>
             </p>
