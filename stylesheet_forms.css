@@ -6,3 +6,20 @@
 body{
     font-family:arial;
 }
+
+button{
+    width:200px;
+    border-radius:5px;
+    height:30px;
+    font-size:16px;
+    background-color:#d8dce3;
+}
+
+.button{
+    width:200px;
+    border-radius:5px;
+    height:30px;
+    font-size:16px;
+    background-color:#a4bde3;
+    border: solid 2px #416aff;
+}

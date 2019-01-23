@@ -125,7 +125,7 @@ else{
 -->
         <input type="hidden" name="amount" value="<?= $amount ?>">
         <br>
-        <input type="submit" name="confirmed" value="Volgende stap">
+        <input class="button" type="submit" name="confirmed" value="Volgende stap">
 
     </form>
     <br>

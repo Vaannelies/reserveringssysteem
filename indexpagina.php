@@ -197,7 +197,7 @@ else{
         Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> <!-- target="_blank"--> algemene voorwaarden</a>:
         <input type="checkbox" name="check" required> <br><br>
 
-        <input type="submit" name="confirmed" value="Bevestigen">
+        <input class="button" type="submit" name="confirmed" value="Bevestigen">
 
 
     </form>
