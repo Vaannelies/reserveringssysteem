@@ -61,7 +61,8 @@
         <input type="submit" name="confirmed" value="Volgende stap">
 
     </form>
-
+    <br>
+    <button onclick="goBack()">Terug naar startpagina</button>
 </div>
 
 <!--
