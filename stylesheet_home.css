@@ -1,6 +1,6 @@
 footer {
     background-color: grey;
-    position: absolute;
+    position: fixed;
     right:0;
     left: 0;
     bottom: 0;
@@ -54,9 +54,9 @@ p{
 div.reserveren{
  /*   border-style:solid;
     border-color:gray; */
-    margin-left:58vw;
 
-    width:700px;
+
+
 }
 
 button.reserveren-button{
