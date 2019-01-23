@@ -6,6 +6,7 @@
  * Time: 13:46
  */
     session_start();
+    include "includes/navbar.inc.php"
 ?>
 
 <!doctype html>
@@ -18,14 +19,6 @@
     <title>Home</title>
     <link rel="stylesheet" href="stylesheet_home.css">
 </head>
-<body>
-
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
-
 
 <div class="afbeeldingenoverlay" style="align-items:stretch; ">
     <div class="afbeeldingen">
@@ -82,6 +75,7 @@
         <footer>
         <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
         <a style="color:#313131; display:flex; justify-content:center; margin-top:-22px;" href="algemene_voorwaarden.html">Algemene voorwaarden</a>
+        </footer>
       <?php } else { ?>
         <footer>
         <button onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Log uit</button>

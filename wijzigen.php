@@ -33,6 +33,7 @@ $phone = $row['phone'];
 $amount = $row['amount'];
 $behandeling1 = $row['behandeling1'];
 $behandeling2 = $row['behandeling2'];
+$behandeling3 = $row['behandeling3'];
 $street = $row['street'];
 $housenumber = $row['housenumber'];
 $city = $row['city'];
@@ -111,6 +112,9 @@ $city = $row['city'];
 
     Aantal mensen verven:
     <input class="text-box" type="text" name="behandeling2" value="<?=$behandeling2?>" required><br>
+
+    Aantal mensen permanent krullen:
+    <input class="text-box" type="text" name="behandeling3" value="<?=$behandeling3?>" required><br>
 
     Straatnaam:
     <input class="text-box" type="text" name="street" value="<?=$street?>" required><br>

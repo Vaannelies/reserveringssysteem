@@ -19,8 +19,9 @@
 $amount = $_POST['amount'];
 $knippen = $_POST['behandeling1'];
 $verven = $_POST['behandeling2'];
+$permanent = $_POST['behandeling3'];
 
-if ($knippen + $verven < $amount) {
+if ($knippen + $verven + $permanent < $amount) {
 
     echo '<script>   goBack();   </script>';
 }
@@ -54,12 +55,9 @@ if ($knippen + $verven < $amount) {
 <body>
 
 <header>
-
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-          <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
+    <?php
+    include 'includes/navbar.inc.php';
+    ?>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2 > STAP 3
@@ -125,7 +123,7 @@ else{
               <br> -->
 
             Telefoonnummer: <br>
-            <input class="text-box" type="text" name="phone" maxlength="20" required>
+            <input class="text-box" type="tel" name="phone" maxlength="20" required>
               <div class="tooltip">i
               <span class="tooltiptext">Dit is nodig om u te kunnen bereiken als dat nodig is.</span>
               </div>
@@ -153,9 +151,7 @@ else{
                 <option value="Lekkerkerk">Lekkerkerk</option>
             </select>
             <div class="tooltip">i
-                <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.<br><br>
-                Staat uw plaats er niet bij?<br>
-                Dan is Christa niet beschikbaar in uw plaats.</span>
+                <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
             </div>
             <div class="tooltip" style="background-color:indianred;">?
                 <span class="tooltiptext">
@@ -192,6 +188,7 @@ else{
     <!--    De behandelingen en hoevaak -->
         <input type="hidden" name="behandeling1" value="<?= $knippen ?>"<br>
         <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
+        <input type="hidden" name="behandeling3" value="<?= $permanent ?>"<br>
 
 
         Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> <!-- target="_blank"--> algemene voorwaarden</a>:

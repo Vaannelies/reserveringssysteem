@@ -92,6 +92,7 @@ div.titel{
   width:100%;
     background-color: #4a3630;
 margin-top:-8px;
+
 }
 
 div.ondertitel{ border:solid 1px black;
@@ -101,6 +102,10 @@ div.ondertitel{ border:solid 1px black;
 
 
 
+}
+
+a.menubutton:hover{
+    background-color:black;
 }
 
 

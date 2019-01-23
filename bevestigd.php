@@ -34,12 +34,9 @@ or die('Error '.mysqli_error($conn).'<br> Query:'.$ophalen);
 </head>
 <div>
 <header>
-
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
+    <?php
+    include 'includes/navbar.inc.php';
+    ?>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2 > STAP 3 > STAP 4
@@ -87,15 +84,16 @@ $city = mysqli_real_escape_string($conn, $_POST['city']);
 
 $knippen = $_POST['behandeling1'];
 $verven = $_POST['behandeling2'];
+$permanent = $_POST['behandeling3'];
 
 
-$toevoegen = "INSERT INTO reserveringen(firstname, lastname, date, time, phone, amount, behandeling1, behandeling2, street, housenumber, city) VALUES('$firstname', '$lastname', '$date', '$time', '$phone', '$amount', '$knippen', '$verven', '$street', '$housenumber','$city')";
+$toevoegen = "INSERT INTO reserveringen(firstname, lastname, date, time, phone, amount, behandeling1, behandeling2, behandeling3, street, housenumber, city) VALUES('$firstname', '$lastname', '$date', '$time', '$phone', '$amount', '$knippen', '$verven', '$permanent', '$street', '$housenumber','$city')";
 
 
 $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)
 or die('Error ' . mysqli_error($conn) . '<br> Query:' . $toevoegen);
 
-    ?><div style="margin-left: 50px;"> De reservering is gelukt! <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button> </div>
+    ?><div style="margin-left: 50px;"> De reservering is gelukt!<br>Om uw reservering af te zeggen of te wijzigen, neem contact op met Christa.<br> <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button> </div>
 <?php
 
 } else {

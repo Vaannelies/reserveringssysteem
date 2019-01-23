@@ -31,6 +31,7 @@ if (!isset($_SESSION['username'])){
     $amount = $row['amount'];
     $behandeling1 = $row['behandeling1'];
     $behandeling2 = $row['behandeling2'];
+    $behandeling3 = $row['behandeling3'];
     $street = $row['street'];
     $housenumber = $row['housenumber'];
     $city = $row['city'];
@@ -101,12 +102,13 @@ if (!isset($_SESSION['username'])){
         </div>
 
         <div
-        style="border: solid 1px black; padding: 10px; padding-right: 15px; height:240px;"> <!-- Reservation stuff -->
+        style="border: solid 1px black; padding: 10px; padding-right: 15px; height:270px;"> <!-- Reservation stuff -->
             <h2 style="text-decoration-line: underline;">To do</h2>
             <p style="text-decoration-line: underline;">  Aantal personen: <?= $amount ?><br><br></p>
             <p style="border-bottom: 1px black solid;"> Van al deze mensen moet u er: </p>
             <p style="border-bottom: 1px black solid;">    <?= $behandeling1 ?> knippen</p>
             <p style="border-bottom: 1px black solid;"> <?= $behandeling2 ?> verven<br>
+            <p style="border-bottom: 1px black solid;"> <?= $behandeling3 ?> permanent krullen<br>
             </p>
         </div>
     </div>

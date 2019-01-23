@@ -24,12 +24,11 @@ $amount = $_POST['amount']
 <body>
 
 <header>
+    <?php
+    include 'includes/navbar.inc.php';
+    ?>
 
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
+
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2
@@ -112,6 +111,15 @@ else{
                     <span id="answerTwo">personen</span>
                 </div>
             </div>
+            <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
+                <img style="width:150px;" src="images/permanent.png"><br>
+                Permament krullen:<br>
+                <!--aantal personen-->
+                <div style="display:flex; justify-content:space-evenly;">
+                    <input style="width:30px;" id="behand3" class="text-box" type="number" name="behandeling3" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenDrie()">
+                    <span id="answer" style="padding-top:5px;"> personen</span>
+                </div>
+            </div>
         </div>
         <br><br>
         Tip: vul voor elke persoon <b>minimaal één</b> behandeling in! <br>
@@ -169,6 +177,19 @@ else{
             }
         }
 
+        function functiePersonenDrie()
+        {
+            var a=document.getElementById("behand3").value;
+
+            if (a=="1")
+            {
+                document.getElementById("answer").innerText="persoon";
+            }
+            else
+            {
+                document.getElementById("answer").innerHTML="personen";
+            }
+        }
 
         function goBack() {
             window.history.back();

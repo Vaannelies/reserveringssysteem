@@ -23,6 +23,7 @@ $phone = $_POST['phone'];
 $amount = $_POST['amount'];
 $behandeling1 = $_POST['behandeling1'];
 $behandeling2 = $_POST['behandeling2'];
+$behandeling3 = $_POST['behandeling3'];
 $street = $_POST['street'];
 $housenumber = $_POST['housenumber'];
 $city = $_POST['city'];
@@ -37,6 +38,7 @@ $update_query = "UPDATE reserveringen SET   firstname = '$firstname',
                                             amount = '$amount', 
                                             behandeling1 = '$behandeling1', 
                                             behandeling2 = '$behandeling2', 
+                                            behandeling3 = '$behandeling3', 
                                             street = '$street',
                                             housenumber = '$housenumber',
                                             city = '$city'
