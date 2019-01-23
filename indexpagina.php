@@ -194,7 +194,7 @@ else{
         <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
 
 
-        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"  target="_blank"> algemene voorwaarden</a>:
+        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> <!-- target="_blank"--> algemene voorwaarden</a>:
         <input type="checkbox" name="check" required> <br><br>
 
         <input type="submit" name="confirmed" value="Bevestigen">
