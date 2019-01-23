@@ -58,7 +58,7 @@
 
         <input class="text-box" type="number" name="amount" min="1" max="10" value="1" required> Maximaal 10 personen <br>
         <br>
-        <input type="submit" name="confirmed" value="Bevestigen">
+        <input type="submit" name="confirmed" value="Volgende stap">
 
     </form>
 

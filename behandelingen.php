@@ -113,7 +113,8 @@ else{
                 </div>
             </div>
         </div>
-
+        <br><br>
+        Tip: vul voor elke persoon <b>minimaal één</b> behandeling in! <br>
 
      <!--   Permanent:
         <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
@@ -124,12 +125,13 @@ else{
 -->
         <input type="hidden" name="amount" value="<?= $amount ?>">
         <br>
-        <input type="submit" name="confirmed" value="Bevestigen">
+        <input type="submit" name="confirmed" value="Volgende stap">
 
     </form>
     <br>
-    Tip: vul voor elke persoon <b>minimaal één</b> behandeling in!
 
+
+    <button onclick="goBack()">Vorige</button>
 </div>
 
 

@@ -202,7 +202,7 @@ else{
 
     </form>
 
-<button onclick="goBack()">Terug</button>
+<button onclick="goBack()">Vorige</button>
 </div>
 
 
