@@ -26,6 +26,8 @@
         </h1>
     </div>
 
+
+<div class="afbeeldingenoverlay" style="align-items:stretch; ">
     <div class="afbeeldingen">
 
         <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
@@ -33,6 +35,11 @@
         <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
 
     </div>
+    <div class="afb_overlay" style="height:120px;">
+
+    </div>
+</div>
+
 
     <section id="boxes">
     <div class="informatie">
