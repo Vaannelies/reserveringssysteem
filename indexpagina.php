@@ -80,11 +80,11 @@ if ($knippen + $verven + $permanent < $amount) {
 
 <?php
 if($amount == 1) {
-    echo "U wilt voor " . $amount . " persoon reserveren.";
+    echo "U wilt voor " . htmlentities($amount) . " persoon reserveren.";
 }
 
 else{
-    echo "U wilt voor " . $amount . " personen reserveren.";
+    echo "U wilt voor " . htmlentities($amount) . " personen reserveren.";
 }
 ?>
     </div>

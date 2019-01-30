@@ -49,39 +49,14 @@ $amount = $_POST['amount'];
     <h1>Kies de gewenste behandeling(en).</h1>
     </div>
 </header>
-    <!-- form action="indexpagina.php" method="post">
-        Kies uw behandeling:<br>
 
-
-
-        <?php
-        for($i = 0; $i < $amount; $i++){ ?>
-        <p>Persoon <?= $i ?></p>
-        <select name="<?= "behandeling".$i ?>" size="10">
-            <option value="knippen">Knippen</option>
-            <option value="verven">Verven</option>
-            <option value="knippenverven">Verven en knippen</option>
-            <option value="kaal">Kaal scheren</option>
-        </select>
-
-        <?php
-        }
-
-        ?>
-
-        <input type="hidden" name="aantal" value="<?= $amount ?>">
-
-        <input type="submit" name="bevestigd" value="Bevestigen">
-
-    </form> -->
-<div style="margin-left:50px;">
 <?php
 if($amount == 1) {
-    echo "U wilt voor " . $amount . " persoon reserveren.";
+    echo "U wilt voor " . htmlentities($amount) . " persoon reserveren.";
 }
 
 else{
-    echo "U wilt voor " . $amount . " personen reserveren.";
+    echo "U wilt voor " . htmlentities($amount) . " personen reserveren.";
 }
 ?>
 
@@ -97,7 +72,7 @@ else{
                 Knippen:<br>
                  <!--aantal personen-->
                  <div style="display:flex; justify-content:space-evenly;">
-                    <input style="width:30px;" id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()">
+                    <input style="width:30px;" id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functiePersonenEen()">
                     <span id="answer" style="padding-top:5px;"> personen</span>
                  </div>
             </div>
@@ -107,7 +82,7 @@ else{
                 Verven:
                  <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
-                    <input style="width:30px;" id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenTwee()">
+                    <input style="width:30px;" id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functiePersonenTwee()">
                     <span id="answerTwo">personen</span>
                 </div>
             </div>
@@ -116,7 +91,7 @@ else{
                 Permament krullen:<br>
                 <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
-                    <input style="width:30px;" id="behand3" class="text-box" type="number" name="behandeling3" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenDrie()">
+                    <input style="width:30px;" id="behand3" class="text-box" type="number" name="behandeling3" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functiePersonenDrie()">
                     <span id="answer" style="padding-top:5px;"> personen</span>
                 </div>
             </div>
@@ -124,14 +99,8 @@ else{
         <br><br>
         Tip: vul voor elke persoon <b>minimaal één</b> behandeling in! <br>
 
-     <!--   Permanent:
-        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
-        <br>
-        Deelpermanent:
-        <input id="behand1" class="text-box" type="number" name="behandeling1" min="0" max="<?=$amount?>" value="0" onclick="functiePersonenEen()"> <span id="answer">personen</span>
-        <br>
--->
-        <input type="hidden" name="amount" value="<?= $amount ?>">
+
+        <input type="hidden" name="amount" value="<?= htmlentities($amount); ?>">
         <br>
         <input class="button" type="submit" name="confirmed" value="Volgende stap">
 
