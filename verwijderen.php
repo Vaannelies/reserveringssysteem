@@ -69,10 +69,10 @@ $row = $results->fetch_assoc();
     </html>
 <br><br>
     <div style="margin-left: 50px;">
-    <h1> Weet u zeker dat u de reservering van <?=$row['firstname']?> <?=$row['lastname']?> wilt verwijderen? </h1>
+    <h1> Weet u zeker dat u de reservering van <?= htmlentities($row['firstname']); ?> <?= htmlentities($row['lastname']); ?> wilt verwijderen? </h1>
     <div style="display:flex; margin-top:60px;">
     <form action="bevestigd_verwijderen.php" method="post">
-        <input type="hidden" name="reservering" value="<?=$id?>">
+        <input type="hidden" name="reservering" value="<?= htmlentities($id); ?>">
         <input type="submit" value="Ja" style="border-radius:5px;
                     width:100px; height: 30px;
                      font-size: 16px;">
