@@ -82,9 +82,9 @@ $city = mysqli_real_escape_string($conn, $_POST['city']);
 
 
 
-$knippen = $_POST['behandeling1'];
-$verven = $_POST['behandeling2'];
-$permanent = $_POST['behandeling3'];
+$knippen = mysqli_real_escape_string($conn, $_POST['behandeling1']);
+$verven = mysqli_real_escape_string($conn, $_POST['behandeling2']);
+$permanent = mysqli_real_escape_string($conn, $_POST['behandeling3']);
 
 
 $toevoegen = "INSERT INTO reserveringen(firstname, lastname, date, time, phone, amount, behandeling1, behandeling2, behandeling3, street, housenumber, city) VALUES('$firstname', '$lastname', '$date', '$time', '$phone', '$amount', '$knippen', '$verven', '$permanent', '$street', '$housenumber','$city')";
