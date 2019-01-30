@@ -5,7 +5,7 @@
  * Date: 10-12-2018
  * Time: 15:04
  */
-$amount = $_POST['amount']
+$amount = mysqli_real_escape_string($conn, $_POST['amount']);
 ?>
 
 <!doctype html>
