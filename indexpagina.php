@@ -16,10 +16,10 @@
 
 </html>
 <?php
-$amount = $_POST['amount'];
-$knippen = $_POST['behandeling1'];
-$verven = $_POST['behandeling2'];
-$permanent = $_POST['behandeling3'];
+$amount = mysqli_real_escape_string($conn, $_POST['amount']);
+$knippen = mysqli_real_escape_string($conn, $_POST['behandeling1']);
+$verven = mysqli_real_escape_string($conn, $_POST['behandeling2']);
+$permanent = mysqli_real_escape_string($conn, $_POST['behandeling3']);
 
 if ($knippen + $verven + $permanent < $amount) {
 
@@ -184,11 +184,11 @@ else{
         </div>
         </div>
         <!--    Aantal personen             -->
-        <input type="hidden" name="amount" min="1" max="10" value="<?= $amount ?>" required><br>
+        <input type="hidden" name="amount" min="1" max="10" value="<?= htmlentities($amount); ?>" required><br>
     <!--    De behandelingen en hoevaak -->
-        <input type="hidden" name="behandeling1" value="<?= $knippen ?>"<br>
-        <input type="hidden" name="behandeling2" value="<?= $verven ?>"<br>
-        <input type="hidden" name="behandeling3" value="<?= $permanent ?>"<br>
+        <input type="hidden" name="behandeling1" value="<?= htmlentities($knippen); ?>"<br>
+        <input type="hidden" name="behandeling2" value="<?= htmlentities($verven); ?>"<br>
+        <input type="hidden" name="behandeling3" value="<?= htmlentities($permanent); ?>"<br>
 
 
         Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> <!-- target="_blank"--> algemene voorwaarden</a>:
