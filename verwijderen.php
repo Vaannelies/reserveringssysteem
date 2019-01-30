@@ -11,7 +11,7 @@ if (!isset($_SESSION['username'])){
     header('Location: Start.php');
 } else {
 
-$id = $_POST['reservering'];
+$id = mysqli_real_escape_string($conn, $_POST['reservering']);
 
 
 $select = "SELECT * FROM reserveringen WHERE id = $id";
