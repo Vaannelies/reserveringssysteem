@@ -15,19 +15,19 @@ if (!isset($_SESSION['username'])){
 
 
 
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$time = $_POST['time'];
-$date = $_POST['date'];
-$phone = $_POST['phone'];
-$amount = $_POST['amount'];
-$behandeling1 = $_POST['behandeling1'];
-$behandeling2 = $_POST['behandeling2'];
-$behandeling3 = $_POST['behandeling3'];
-$street = $_POST['street'];
-$housenumber = $_POST['housenumber'];
-$city = $_POST['city'];
-$id = $_POST['id'];
+$firstname =  mysqli_real_escape_string($conn, $_POST['firstname']);
+$lastname =  mysqli_real_escape_string($conn, $_POST['lastname']);
+$time =  mysqli_real_escape_string($conn, $_POST['time']);
+$date =  mysqli_real_escape_string($conn, $_POST['date']);
+$phone =  mysqli_real_escape_string($conn, $_POST['phone']);
+$amount =  mysqli_real_escape_string($conn, $_POST['amount']);
+$behandeling1 =  mysqli_real_escape_string($conn, $_POST['behandeling1']);
+$behandeling2 =  mysqli_real_escape_string($conn, $_POST['behandeling2']);
+$behandeling3 =  mysqli_real_escape_string($conn, $_POST['behandeling3']);
+$street =  mysqli_real_escape_string($conn, $_POST['street']);
+$housenumber =  mysqli_real_escape_string($conn, $_POST['housenumber']);
+$city =  mysqli_real_escape_string($conn, $_POST['city']);
+$id =  mysqli_real_escape_string($conn, $_POST['id']);
 
 
 $update_query = "UPDATE reserveringen SET   firstname = '$firstname', 
