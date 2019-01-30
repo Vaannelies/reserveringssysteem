@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])){
 
 
 
-$id = $_POST['reservering'];
+$id =  mysqli_real_escape_string($conn, $_POST['reservering']);
 
 $delete_query = "DELETE FROM reserveringen WHERE id = $id";
 
