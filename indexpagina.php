@@ -16,10 +16,10 @@
 
 </html>
 <?php
-$amount = mysqli_real_escape_string($conn, $_POST['amount']);
-$knippen = mysqli_real_escape_string($conn, $_POST['behandeling1']);
-$verven = mysqli_real_escape_string($conn, $_POST['behandeling2']);
-$permanent = mysqli_real_escape_string($conn, $_POST['behandeling3']);
+$amount = $_POST['amount'];
+$knippen =$_POST['behandeling1'];
+$verven = $_POST['behandeling2'];
+$permanent = $_POST['behandeling3'];
 
 if ($knippen + $verven + $permanent < $amount) {
 
