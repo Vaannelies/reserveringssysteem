@@ -105,28 +105,20 @@ session_start();
 
         foreach ($reserveringen as $reservering) {
             ?>
-            <tr><td><?=$reservering['id']?></td>
-                <td><?=$reservering['firstname']?></td>
-                <td><?=$reservering['lastname']?></td>
-                <td><?=$reservering['time']?></td>
-                <td><?=$reservering['date']?></td>
-                <!--
-                <td><?=$reservering['phone']?></td>
-                <td><?=$reservering['amount']?></td>
-                <td class="behand_left"><?=$reservering['behandeling1']?></td>
-                <td class="behand_mid"><?=$reservering['behandeling2']?></td>
-                <td class="behand_right">= <?=$reservering['behandeling1'] + $reservering['behandeling2']?></td>
-                <td><?=$reservering['street']?></td>
-                <td><?=$reservering['housenumber']?></td>
-                <td><?=$reservering['city']?></td> -->
-                <td style="border-left:solid 2px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Verwijderen" style="border-radius: 8px; font-size:18px; color:white; background-color:indianred;"></form></td>
-                <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Wijzigen" style="border-radius: 8px; font-size:18px;"></form></td>
-                <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= $reservering['id']?>"><input type="submit" value="Details" style="border-radius: 8px; font-size:18px;"></form></td>
+            <tr><td><?= htmlentities($reservering['id']); ?></td>
+                <td><?= htmlentities($reservering['firstname']); ?></td>
+                <td><?= htmlentities($reservering['lastname']); ?></td>
+                <td><?= htmlentities($reservering['time']); ?></td>
+                <td><?= htmlentities($reservering['date']); ?></td>
+
+                <td style="border-left:solid 2px black;"> <form method="post" action="verwijderen.php"><input type="hidden" name="reservering" value="<?= htmlentities($reservering['id']); ?>"><input type="submit" value="Verwijderen" style="border-radius: 8px; font-size:18px; color:white; background-color:indianred;"></form></td>
+                <td> <form method="post" action="wijzigen.php"><input type="hidden" name="reservering" value="<?= htmlentities($reservering['id']); ?>"><input type="submit" value="Wijzigen" style="border-radius: 8px; font-size:18px;"></form></td>
+                <td> <form method="post" action="details.php"><input type="hidden" name="reservering" value="<?= htmlentities($reservering['id']); ?>"><input type="submit" value="Details" style="border-radius: 8px; font-size:18px;"></form></td>
 
             </tr>
 
             <?php
-            //echo $reservering['0'] . " " . $reservering['firstname'] . " " . $reservering['lastname'] . "<br>";
+            
         }
     }
         ?>
