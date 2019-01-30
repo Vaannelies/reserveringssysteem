@@ -55,14 +55,29 @@
 
         <div class="info"> <!--contact heb ik weggeveegd-->
             <h2>Contactinformatie</h2>
-            <p>E-mail: christadecoolekapster@hotmail.com<br>
-            Telefoon: 0180-482912<br>
-            Adres: van Stratenstraat 138</p>
+            <p>  E-mail: christadecoolekapster@hotmail.com<br>
+                 Telefoon: 0180-482912<br>
+                 Adres: van Stratenstraat 138
+            </p>
             <div class="reserveren">
                 <button class="reserveren-button" onclick="window.location.href = 'aantal personen.php'" > Reserveren </button>
+                <div style="display:flex; justify-content: center; margin-top:45px;">
+                    <?php
+                    $json = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=Krimpen aan den IJssel,NL&appid=ca7d6c6d90ffcf24578139697fdd29bb");
+                    $data = json_decode($json);
+
+                    $temp = $data->main->temp;
+                    $temp_cel = ($temp - 273.15);
+
+                    echo "In " .$data->name. " is het " . $temp_cel . " °C. <br>";
+                    ?>
+                </div>
             </div>
         </div>
     </div>
+
+
+
 
     </section>
 
@@ -75,6 +90,7 @@
         <footer>
         <button onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
         <a style="color:#313131; display:flex; justify-content:center; margin-top:-22px;" href="algemene_voorwaarden.html">Algemene voorwaarden</a>
+
         </footer>
       <?php } else { ?>
         <footer>
@@ -84,7 +100,8 @@
         </footer>
    <?php }
 
-    ?>
+
+?>
 
 
 </body>
