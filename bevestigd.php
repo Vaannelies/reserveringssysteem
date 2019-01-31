@@ -90,68 +90,62 @@ $permanent = mysqli_real_escape_string($conn, $_POST['behandeling3']);
 
     // empty
 
-    If ($firstname == ""){
-        $errors['firstname'] = 'Artist cannot be empty';
+    if ($firstname == ""){
+        $errors['firstname'] = 'Voornaam is niet ingevuld.';
     }
 
-    If ($lastname == ""){
-        $errors['lastname'] = 'Name cannot be empty';
+    if ($lastname == ""){
+        $errors['lastname'] = 'Achternaam is niet ingevuld.';
     }
 
-    If ($date == ""){
-        $errors['date'] = 'Name cannot be empty';
+    if ($date == ""){
+        $errors['date'] = 'Datum is niet ingevuld.';
     }
 
-    If ($time == ""){
-        $errors['time'] = 'Name cannot be empty';
+    if ($time == ""){
+        $errors['time'] = 'Tijd is niet ingevuld.';
     }
 
-    If ($phone == ""){
-        $errors['phone'] = 'Name cannot be empty';
+    if ($phone == ""){
+        $errors['phone'] = 'Telefoonnummer is niet ingevuld.';
     }
 
-    If ($amount == ""){
-        $errors['amount'] = 'Name cannot be empty';
+    if ($amount == ""){
+        $errors['amount'] = 'Aantal personen is niet ingevuld.';
     }
 
-    If ($street == ""){
+    if ($street == ""){
         $errors['street'] = 'Straatnaam is niet ingevuld.';
     }
 
-    If ($housenumber == ""){
+    if ($housenumber == ""){
         $errors['housenumber'] = 'Huisnummer is niet ingevuld';
     }
 
-    If ($city == ""){
+    if ($city == ""){
         $errors['city'] = 'Plaats is niet ingevuld.';
     }
 
-    If ($knippen == ""){
+    if ($knippen == ""){
         $errors['knippen'] = 'Er is niks ingevuld bij de behandeling "knippen". Het moet minimaal "0" zijn.';
     }
 
-    If ($verven == ""){
+    if ($verven == ""){
             $errors['verven'] = 'Er is niks ingevuld bij de behandeling "verven". Het moet minimaal "0" zijn.';
         }
 
-    If ($permanent == ""){
+    if ($permanent == ""){
             $errors['permanent'] = 'Er is niks ingevuld bij de behandeling "permanent krullen". Het moet minimaal "0" zijn.';
         }
 
     // wrong
 
-  /*/  If (!is_numeric($year) || strlen($year) != 4) {
-        $errors['year'] = 'Year needs to be a number with the length of 4';
-    } /*/
-
-
-
-    If(!is_numeric($phone)){
+    if(!is_numeric($phone)){
         $errors['phonechar'] = 'Het telefoonnummer mag alleen uit cijfers bestaan.';
     }
 
 
-If (empty($errors)){
+if (empty($errors)){
 
 
             $toevoegen = "INSERT INTO reserveringen(firstname, lastname, date, time, phone, amount, behandeling1, behandeling2, behandeling3, street, housenumber, city) VALUES('$firstname', '$lastname', '$date', '$time', '$phone', '$amount', '$knippen', '$verven', '$permanent', '$street', '$housenumber','$city')";
@@ -160,37 +154,37 @@ If (empty($errors)){
             $toevoegenuitvoeren = mysqli_query($conn, $toevoegen)
             or die('Error ' . mysqli_error($conn) . '<br> Query:' . $toevoegen);
 
-                ?><div style="margin-left: 50px;"> De reservering is gelukt!<br>Om uw reservering af te zeggen of te wijzigen, neem contact op met Christa.<br> <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button> </div>
-            <?php
+                ?>
+    <div style="margin-left: 50px;"> De reservering is gelukt!<br>Om uw reservering af te zeggen of te wijzigen, neem contact op met Christa.<br>
+        <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button>
+    </div>
+            <?php } else { ?>
 
-                   } else {
-    ?>
-
-    <?=isset ($errors['firstname']) ? $errors['firstname'] : ' ' ?>
-    <?=isset ($errors['lastname']) ? $errors['lastname'] : ' ' ?>
-    <?=isset ($errors['date']) ? $errors['date'] : ' ' ?>
-    <?=isset ($errors['time']) ? $errors['time'] : ' ' ?>
-    <?=isset ($errors['phone']) ? $errors['phone'] : ' ' ?>
-    <?=isset ($errors['amount']) ? $errors['amount'] : ' ' ?>
-    <?=isset ($errors['street']) ? $errors['street'] : ' ' ?>
-    <?=isset ($errors['housenumber']) ? $errors['housenumber'] : ' ' ?>
-    <?=isset ($errors['city']) ? $errors['city'] : ' ' ?>
-    <?=isset ($errors['knippen']) ? $errors['knippen'] : ' ' ?>
-    <?=isset ($errors['verven']) ? $errors['verven'] : ' ' ?>
-    <?=isset ($errors['permanent']) ? $errors['permanent'] : ' ' ?>
-    <?=isset ($errors['phonechar']) ? $errors['phonechar'] : ' ' ?>
+   <div style="margin-left:50px;">
 
 
-    <h2>Er is iets niet goed gegaan. </h2><br>
+    <h1>Er is iets niet goed gegaan. </h1>
+       <p style="color:#a80000;">
+           <?=isset ($errors['firstname']) ? $errors['firstname'] . '<br>' : ' ' ?>
+           <?=isset ($errors['lastname']) ? $errors['lastname'] . '<br>' : ' ' ?>
+           <?=isset ($errors['date']) ? $errors['date'] . '<br>' : ' ' ?>
+           <?=isset ($errors['time']) ? $errors['time'] . '<br>' : ' ' ?>
+           <?=isset ($errors['phone']) ? $errors['phone'] . '<br>' : ' ' ?>
+           <?=isset ($errors['amount']) ? $errors['amount'] . '<br>' : ' ' ?>
+           <?=isset ($errors['street']) ? $errors['street'] . '<br>' : ' ' ?>
+           <?=isset ($errors['housenumber']) ? $errors['housenumber'] . '<br>' : ' ' ?>
+           <?=isset ($errors['city']) ? $errors['city'] . '<br>' : ' ' ?>
+           <?=isset ($errors['knippen']) ? $errors['knippen'] . '<br>' : ' ' ?>
+           <?=isset ($errors['verven']) ? $errors['verven'] . '<br>' : ' ' ?>
+           <?=isset ($errors['permanent']) ? $errors['permanent'] . '<br>' : ' ' ?>
+           <?=isset ($errors['phonechar']) ? $errors['phonechar'] . '<br>' : ' ' ?>
+       </p>
     <button  onclick="goBack()" style="border-radius:5px;
                     width:200px; height: 30px;
                     font-size: 16px;">Terug</button>
 
-    <!-- <form action="indexpagina.php" method="post">
-        <input type="hidden" name="errors" value="<?=$errors?>">
-    <input type="submit" value="Terug2">
-    </form> -->
 
+   </div>
     <?php
 }
 
