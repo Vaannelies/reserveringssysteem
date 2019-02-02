@@ -78,20 +78,21 @@ else{
             <!--afbeelding en aantal personen -->
             <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
                 <img style="width:150px; height:150px;" src="images/verven.png"><br>
-                Verven:
+                Verven:<br>
                  <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
                     <input style="width:30px;" id="behand2" class="text-box" type="number" name="behandeling2" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functiePersonenTwee()">
-                    <span id="answerTwo">personen</span>
+                    <span id="answerTwo" style="padding-top:5px;"> personen</span>
                 </div>
             </div>
+            <!--afbeelding en aantal personen -->
             <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
                 <img style="width:150px; height:150px;" src="images/permanent.png"><br>
                 Permament krullen:<br>
                 <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
                     <input style="width:30px;" id="behand3" class="text-box" type="number" name="behandeling3" min="0" max="<?= htmlentities($amount); ?>" value="0" onclick="functiePersonenDrie()">
-                    <span id="answer" style="padding-top:5px;"> personen</span>
+                    <span id="answerThree" style="padding-top:5px;"> personen</span>
                 </div>
             </div>
         </div>
@@ -151,11 +152,11 @@ else{
 
             if (a=="1")
             {
-                document.getElementById("answer").innerText="persoon";
+                document.getElementById("answerThree").innerText="persoon";
             }
             else
             {
-                document.getElementById("answer").innerHTML="personen";
+                document.getElementById("answerThree").innerHTML="personen";
             }
         }
 
