@@ -30,6 +30,7 @@ img{
     width:33%;
     right:0;
     left:0;
+    height:33%;
 }
 
 div.informatie{
@@ -84,6 +85,7 @@ button.reserveren-button{
 body{
     font-family: Arial;
     margin-left: 0;
+
 }
 
 div.titel{

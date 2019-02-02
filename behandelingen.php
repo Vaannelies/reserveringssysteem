@@ -35,13 +35,12 @@ $amount = $_POST['amount'];
         </h1>
         <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
-            <!--  <div style="margin-left:60%;"> -->
+
             <button  onclick="goBack()"
                      style="border-radius:5px;
                     width:200px; height: 30px;
                     font-size: 16px;">Terug</button>
 
-            <!-- </div> -->
         </h1>
 
     </div>
@@ -49,7 +48,7 @@ $amount = $_POST['amount'];
     <h1>Kies de gewenste behandeling(en).</h1>
     </div>
 </header>
-
+<div style=" margin-left:50px;">
 <?php
 if($amount == 1) {
     echo "U wilt voor " . htmlentities($amount) . " persoon reserveren.";
@@ -68,7 +67,7 @@ else{
         <div style="display:flex; flex-direction:row; justify-content: flex-start;">
             <!--afbeelding en aantal personen -->
             <div style="display:flex; flex-direction:column; width:150px; text-align:center;">
-                <img style="width:150px;" src="images/knippen.png"><br>
+                <img style="width:150px; height:150px;" src="images/knippen.png"><br>
                 Knippen:<br>
                  <!--aantal personen-->
                  <div style="display:flex; justify-content:space-evenly;">
@@ -78,7 +77,7 @@ else{
             </div>
             <!--afbeelding en aantal personen -->
             <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
-                <img style="width:150px;" src="images/verven.png"><br>
+                <img style="width:150px; height:150px;" src="images/verven.png"><br>
                 Verven:
                  <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
@@ -87,7 +86,7 @@ else{
                 </div>
             </div>
             <div style="margin-left: 50px; display:flex; flex-direction:column; width:150px; text-align:center;">
-                <img style="width:150px;" src="images/permanent.png"><br>
+                <img style="width:150px; height:150px;" src="images/permanent.png"><br>
                 Permament krullen:<br>
                 <!--aantal personen-->
                 <div style="display:flex; justify-content:space-evenly;">
