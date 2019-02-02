@@ -12,6 +12,9 @@
 //permanent krullen 3000000
 
 ?>
+
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -61,4 +64,4 @@ include 'includes/navbar.inc.php';
         window.history.back();
     }
 </script>
-
+</html>

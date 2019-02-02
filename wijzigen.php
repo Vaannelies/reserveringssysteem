@@ -16,7 +16,7 @@ if (!isset($_SESSION['username'])){
 
 
 
-$id = $_POST['reservering'];
+$id = mysqli_real_escape_string($conn, $_POST['reservering']);
 
 
 
@@ -42,7 +42,8 @@ $city = htmlentities($row['city']);
 
 ?>
 
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="stylesheet_home.css">
