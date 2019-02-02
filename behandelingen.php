@@ -116,8 +116,6 @@ else{
 
     <script>
 
-
-
         function functiePersonenEen()
         {
             var a=document.getElementById("behand1").value;
@@ -128,7 +126,7 @@ else{
             }
             else
             {
-                document.getElementById("answer").innerHTML="personen";
+                document.getElementById("answer").innerText="personen";
             }
         }
 
@@ -142,7 +140,7 @@ else{
             }
             else
             {
-                document.getElementById("answerTwo").innerHTML="personen";
+                document.getElementById("answerTwo").innerText="personen";
             }
         }
 
@@ -156,7 +154,7 @@ else{
             }
             else
             {
-                document.getElementById("answerThree").innerHTML="personen";
+                document.getElementById("answerThree").innerText="personen";
             }
         }
 
