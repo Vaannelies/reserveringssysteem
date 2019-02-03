@@ -1,0 +1,48 @@
+@media(max-width: 700px){
+    #titel{
+        text-align:center;
+        margin-left:-50px;
+    }
+
+    div.titel{
+        flex-direction:column;
+    }
+
+    div.menu{
+        justify-content:space-evenly;
+        display:flex;
+        width:100%;
+    }
+
+    a.menubutton{
+    width:100px;
+    }
+
+    h2 {
+        font-size:100%;
+    }
+
+    #menuright{
+        display:flex;
+        justify-content:center;
+        width:auto;
+    }
+
+    #menu{
+        display:flex;
+        justify-content:center;
+        width:auto;
+    }
+}
+
+#menuright{
+padding-right:20px;
+    padding-left:10px;
+    width:auto;
+}
+
+#menu{
+    width:auto;
+    padding-right:10px;
+    padding-left:10px;
+}
