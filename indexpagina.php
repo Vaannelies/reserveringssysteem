@@ -17,7 +17,7 @@
 </html>
 <?php
 $amount = $_POST['amount'];
-$knippen =$_POST['behandeling1'];
+$knippen = $_POST['behandeling1'];
 $verven = $_POST['behandeling2'];
 $permanent = $_POST['behandeling3'];
 
@@ -28,10 +28,11 @@ if ($knippen + $verven + $permanent < $amount) {
 
 
 
-/*/ $behandelingen = $_POST[for($i = 0; $i < $aantalpersonen; $i++){
-                             echo "behandeling".$i; }
-                         ];                                     Nee man. Geen for-loop in een post. XD
-/*/                                                          // Ik ga een array gebruiken.
+require_once 'faker/src/autoload.php';
+$faker = Faker\Factory::create();
+
+
+
 
 ?>
 
@@ -95,14 +96,14 @@ else{
       <div style="display:flex; flex-direction: row; ">
         <div>
             Voornaam:<br>
-            <input class="text-box" type="text" name="firstname" maxlength="50" required>
+            <input class="text-box" type="text" name="firstname" maxlength="50" placeholder="<?= $faker->firstName?>" required>
                 <div class="tooltip">i
                 <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
                 </div>
                 <br>
 
             Achternaam:<br>
-            <input class="text-box" type="text" name="lastname" maxlength="100" required>
+            <input class="text-box" type="text" name="lastname" maxlength="100" placeholder="<?= $faker->lastName?>" required>
                 <div class="tooltip">i
                 <span class="tooltiptext">Dit is nodig om te weten wie u bent.</span>
                 </div>
@@ -123,21 +124,21 @@ else{
               <br> -->
 
             Telefoonnummer: <br>
-            <input class="text-box" type="tel" name="phone" maxlength="20" required>
+            <input class="text-box" type="tel" name="phone" maxlength="20" placeholder="<?= $faker->phoneNumber?>" required>
               <div class="tooltip">i
               <span class="tooltiptext">Dit is nodig om u te kunnen bereiken als dat nodig is.</span>
               </div>
               <br>
 
             Straatnaam:<br>
-            <input class="text-box" type="text" name="street" maxlength="70" required>
+            <input class="text-box" type="text" name="street" maxlength="70" placeholder="<?= $faker->streetName?>" required>
               <div class="tooltip">i
               <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
               </div>
               <br>
 
             Huisnummer:<br>
-            <input class="text-box" type="text" name="housenumber" maxlength="20" required>
+            <input class="text-box" type="text" name="housenumber" maxlength="20" placeholder="<?= $faker->buildingNumber?>" required>
               <div class="tooltip">i
               <span class="tooltiptext">Dit is nodig om u te kunnen bezoeken.</span>
               </div>
@@ -191,7 +192,7 @@ else{
         <input type="hidden" name="behandeling3" value="<?= htmlentities($permanent); ?>"<br>
 
 
-        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.html"> <!-- target="_blank"--> algemene voorwaarden</a>:
+        Door dit aan te vinken, gaat u akkoord met de <a href="algemene_voorwaarden.php"> <!-- target="_blank"--> algemene voorwaarden</a>:
         <input type="checkbox" name="check" required> <br><br>
 
         <input class="button" type="submit" name="confirmed" value="Bevestigen">
@@ -203,6 +204,48 @@ else{
 </div>
 
 
+
+
+
+
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="main.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+​$("#datepicker").datepicker({
+beforeShowDay: function(date) {
+var day = date.getDay();
+return [(day != 1 && day != 2)];
+}
+})​​​​​;​
+
+-->
 <!--
 
 DIT KAN IK DESNOODS GEBRUIKEN ALS HET ZELF NIET LUKT. DIT IS EEN DATEPICKER.
@@ -222,24 +265,4 @@ $("#datepicker").val($.datepicker.formatDate('mm/dd/yy', tomorrow));
 </script>
 
 <p>Date: <input type="text" id="datepicker"></p>
--->
-
-<script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-<script src="main.js"></script>
-
-</body>
-
-</html>
-
-<!--
-​$("#datepicker").datepicker({
-beforeShowDay: function(date) {
-var day = date.getDay();
-return [(day != 1 && day != 2)];
-}
-})​​​​​;​
-
 -->
