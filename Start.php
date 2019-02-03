@@ -48,7 +48,7 @@
             <li>Krimpen aan de Lek</li>
             <li>Lekkerkerk</li>
             </ul>
-            Wilt u uw afspraak verzetten of afzeggen? Neem dan contact op met Christa.
+            Wilt u uw afspraak verzetten of afzeggen? Neem dan contact op met Christa. <br><br><br><br>
            </p>
         </div>
 

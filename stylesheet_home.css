@@ -120,7 +120,7 @@ span.alg::after{
 }
 @media(max-width: 900px) {
     footer{
-        position: absolute;
+        position: fixed;
     }
 
 
