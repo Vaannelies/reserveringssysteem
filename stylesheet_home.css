@@ -91,7 +91,7 @@ body{
 div.titel{
 
     border:solid 1px black;
-  width:100%;
+  width:100vw;
     background-color: #4a3630;
 margin-top:-8px;
 
@@ -110,4 +110,37 @@ a.menubutton:hover{
     background-color:black;
 }
 
+a.algvw{
+    display:flex; justify-content:center;
+    margin-top:-22px;
 
+}
+span.alg::after{
+    content: "Algemene voorwaarden";
+}
+@media(max-width: 900px) {
+    footer{
+        position: absolute;
+    }
+
+
+    a.algvw {
+        display: flex;
+        justify-content:flex-end;
+        margin-top:-30px;
+    }
+
+    span.alg::after{
+       content: url("images/algvw.png");
+    }
+
+    button.reserveren-button{
+        font-size: 130%;
+    }
+}
+
+@media(max-width: 400px) {
+    footer.ingelogd {
+        height: 50px;
+    }
+}
