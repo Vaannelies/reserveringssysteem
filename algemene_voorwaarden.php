@@ -11,7 +11,7 @@
 <header>
 
         <?php
-            include "navbar.inc.php"
+            include 'includes/navbar.inc.php';
             ?>
 
     <div class="ondertitel">
