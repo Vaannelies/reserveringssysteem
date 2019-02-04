@@ -15,19 +15,19 @@ if (!isset($_SESSION['username'])){
 
 
 
-$firstname =  mysqli_real_escape_string($conn, $_POST['firstname']);
-$lastname =  mysqli_real_escape_string($conn, $_POST['lastname']);
-$time =  mysqli_real_escape_string($conn, $_POST['time']);
-$date =  mysqli_real_escape_string($conn, $_POST['date']);
-$phone =  mysqli_real_escape_string($conn, $_POST['phone']);
-$amount =  mysqli_real_escape_string($conn, $_POST['amount']);
-$behandeling1 =  mysqli_real_escape_string($conn, $_POST['behandeling1']);
-$behandeling2 =  mysqli_real_escape_string($conn, $_POST['behandeling2']);
-$behandeling3 =  mysqli_real_escape_string($conn, $_POST['behandeling3']);
-$street =  mysqli_real_escape_string($conn, $_POST['street']);
-$housenumber =  mysqli_real_escape_string($conn, $_POST['housenumber']);
-$city =  mysqli_real_escape_string($conn, $_POST['city']);
-$id =  mysqli_real_escape_string($conn, $_POST['id']);
+$firstname = mysqli_real_escape_string($conn, $_POST['firstname']);
+$lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
+$time = mysqli_real_escape_string($conn, $_POST['time']);
+$date = mysqli_real_escape_string($conn, $_POST['date']);
+$phone = mysqli_real_escape_string($conn, $_POST['phone']);
+$amount = mysqli_real_escape_string($conn, $_POST['amount']);
+$behandeling1 = mysqli_real_escape_string($conn, $_POST['behandeling1']);
+$behandeling2 = mysqli_real_escape_string($conn, $_POST['behandeling2']);
+$behandeling3 = mysqli_real_escape_string($conn, $_POST['behandeling3']);
+$street = mysqli_real_escape_string($conn, $_POST['street']);
+$housenumber = mysqli_real_escape_string($conn, $_POST['housenumber']);
+$city = mysqli_real_escape_string($conn, $_POST['city']);
+$id = mysqli_real_escape_string($conn, $_POST['id']);
 
 
 $update_query = "UPDATE reserveringen SET   firstname = '$firstname', 
@@ -69,11 +69,7 @@ else {
     <body>
     <header>
 
-        <div class="titel">
-            <h1 style="color:white; margin-left:50px; font-family: arial;">
-                <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-            </h1>
-        </div>
+        <?php include 'includes/navbar.inc.php'; ?>
         <div class="ondertitel">
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Reservering wijzigen
