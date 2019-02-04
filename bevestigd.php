@@ -29,6 +29,7 @@ or die('Error '.mysqli_error($conn).'<br> Query:'.$ophalen);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet_home.css">
+    <link rel="stylesheet" href="stylesheet_forms.css">
 </head>
 <div>
 <header>
@@ -43,9 +44,7 @@ or die('Error '.mysqli_error($conn).'<br> Query:'.$ophalen);
 
             <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
-                     style="border-radius:5px;
-                    width:200px; height: 30px;
-                    font-size: 16px;">Terug</button>
+                     class="terugknopboven">Terug</button>
 
             <!-- </div> -->
         </h1>
@@ -156,7 +155,7 @@ if (empty($errors)){
 
                 ?>
     <div style="margin-left: 50px;"> De reservering is gelukt!<br>Om uw reservering af te zeggen of te wijzigen, neem contact op met Christa.<br>
-        <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button>
+        <button onclick="window.location.href='Start.php'" style="height:100px;">Terug naar het beginscherm</button>
     </div>
             <?php } else { ?>
 
@@ -191,7 +190,7 @@ if (empty($errors)){
 } else {
 
    echo "<div style='margin-left: 50px; font-size: 27px;'>"."Error: de reservering is niet goed uitgevoerd. "; ?><br>
-    <button onclick="window.location.href='Start.php'">Terug naar het beginscherm</button> </p> </div><?php
+    <button onclick="window.location.href='Start.php'" style="height:100px;">Terug naar het beginscherm</button> </p> </div><?php
 }
 
 ?>

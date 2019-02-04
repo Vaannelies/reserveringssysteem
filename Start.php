@@ -107,14 +107,15 @@
 <script>
     let i = 0;
     let images = [];
-    let time = 1500;
+    let time = 1500; //Snelheid van verandering
 
+    //De afbeeldingen
     images[0] = "https://i.etsystatic.com/15439563/r/il/961d2f/1238341186/il_570xN.1238341186_8qwg.jpg";
     images[1] = "images/kam.png";
 
 
     function changeImg(){
-        document.slide.src = images[i];
+        document.slide.src = images[i]; //dat 'slide' moet gelijk zijn aan de naam van de img die moet veranderen
         if (i < images.length - 1){
             i++;
         } else {

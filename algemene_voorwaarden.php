@@ -22,9 +22,7 @@
 
             <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
-                     style="border-radius:5px;
-                    width:200px; height: 30px;
-                    font-size: 16px;">Terug</button>
+                     class="terugknopboven">Terug</button>
 
             <!-- </div> -->
         </h1>

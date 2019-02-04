@@ -16,10 +16,10 @@
 
 </html>
 <?php
-$amount = $_POST['amount'];
-$knippen = $_POST['behandeling1'];
-$verven = $_POST['behandeling2'];
-$permanent = $_POST['behandeling3'];
+$amount     = $_POST['amount'];
+$knippen    = $_POST['behandeling1'];
+$verven     = $_POST['behandeling2'];
+$permanent  = $_POST['behandeling3'];
 
 if ($knippen + $verven + $permanent < $amount) {
 
@@ -63,21 +63,16 @@ $faker = Faker\Factory::create();
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2 > STAP 3
         </h1>
+
         <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
-
-            <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
-                     style="border-radius:5px;
-                    width:200px; height: 30px;
-                    font-size: 16px;">Terug</button>
-
-            <!-- </div> -->
+                     class="terugknopboven">Terug</button>
         </h1>
-
     </div>
+
     <div style="margin-left:50px;">
     <h1>Vul uw persoonlijke gegevens in.</h1>
-    <p></p>
+
 
 <?php
 if($amount == 1) {
@@ -161,7 +156,6 @@ else{
             <br>
         </div>
 
-
         <!--tijdgegevens-->
         <div style="margin-left:20px;">
 
@@ -171,7 +165,6 @@ else{
                 <span class="tooltiptext">Dit is nodig om te weten op welke dag er gereserveerd moet worden.</span>
             </div>
             <br>
-
 
             Tijd van afspraak:<br>
             <select name="time" id="time" class="text-box">
@@ -183,7 +176,8 @@ else{
             Kies een tijd tussen 18:30 uur en 20:30 uur.
             <br>
         </div>
-        </div>
+      </div>
+
         <!--    Aantal personen             -->
         <input type="hidden" name="amount" min="1" max="10" value="<?= htmlentities($amount); ?>" required><br>
     <!--    De behandelingen en hoevaak -->
@@ -197,19 +191,10 @@ else{
 
         <input class="button" type="submit" name="confirmed" value="Bevestigen">
 
-
     </form>
 
 <button onclick="goBack()">Vorige</button>
 </div>
-
-
-
-
-
-
-
-
 
 
 <script
