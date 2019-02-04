@@ -30,10 +30,10 @@ $amount = $_POST['amount'];
 
 
     <div class="ondertitel">
-        <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px; display:flex;">
+        <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2
         </h1>
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; padding-right:10px;">
+        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
 
             <button  onclick="goBack()"
