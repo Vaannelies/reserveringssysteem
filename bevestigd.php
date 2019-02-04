@@ -40,7 +40,7 @@ or die('Error '.mysqli_error($conn).'<br> Query:'.$ophalen);
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             STAP 1 > STAP 2 > STAP 3 > STAP 4
         </h1>
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+        <h1 class="terugknopboven"  style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
             <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
