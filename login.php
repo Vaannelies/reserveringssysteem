@@ -22,7 +22,7 @@
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">Inloggen
         </h1>
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+        <h1 class="terugknopboven" style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
             <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
