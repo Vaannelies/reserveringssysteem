@@ -27,16 +27,13 @@ session_start();
     //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.
     if (!isset($_SESSION['username'])){
         header('Location: Start.php');
+        exit();
     } else { ?>
 <body>
 
 <header>
 
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
+    <?php include 'includes/navbar.inc.php'; ?>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
         Reserveringen
@@ -90,17 +87,8 @@ session_start();
                 <th>Voornaam</th>
                 <th>Achternaam</th>
                 <th>Tijd</th>
-                <th>Datum</th> <!--
-                <th>Telefoonnummer</th>
-                <th>Aantal personen</th>
-                <th>Knippen</th>
-                <th>Verven</th>
-                <th>Totaal aantal behandelingen</th>
-                <th>Straat</th>
-                <th>Huisnummer</th>
-                <th>Plaats</th>
-            </tr>
-            -->
+                <th>Datum</th>
+
         <?php
 
         foreach ($reserveringen as $reservering) {
@@ -118,7 +106,7 @@ session_start();
             </tr>
 
             <?php
-            
+
         }
     }
         ?>

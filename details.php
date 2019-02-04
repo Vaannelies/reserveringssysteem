@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])){
 } else {
 
 
-    $id = $_POST['reservering'];
+    $id = mysqli_real_escape_string($conn, $_POST['reservering']);
 
 
     $select = "SELECT * FROM reserveringen WHERE ID = $id";
@@ -23,18 +23,18 @@ if (!isset($_SESSION['username'])){
     $results = mysqli_query($conn, $select);
     $row = $results->fetch_assoc();
 
-    $firstname = $row['firstname'];
-    $lastname = $row['lastname'];
-    $time = $row['time'];
-    $date = $row['date'];
-    $phone = $row['phone'];
-    $amount = $row['amount'];
-    $behandeling1 = $row['behandeling1'];
-    $behandeling2 = $row['behandeling2'];
-    $behandeling3 = $row['behandeling3'];
-    $street = $row['street'];
-    $housenumber = $row['housenumber'];
-    $city = $row['city'];
+    $firstname = htmlentities($row['firstname']);
+    $lastname = htmlentities($row['lastname']);
+    $time = htmlentities($row['time']);
+    $date = htmlentities($row['date']);
+    $phone = htmlentities($row['phone']);
+    $amount = htmlentities($row['amount']);
+    $behandeling1 = htmlentities($row['behandeling1']);
+    $behandeling2 = htmlentities($row['behandeling2']);
+    $behandeling3 = htmlentities($row['behandeling3']);
+    $street = htmlentities($row['street']);
+    $housenumber = htmlentities($row['housenumber']);
+    $city = htmlentities($row['city']);
 
 
 
@@ -55,11 +55,7 @@ if (!isset($_SESSION['username'])){
 
     <header>
 
-        <div class="titel">
-            <h1 style="color:white; margin-left:50px; font-family: arial;">
-                <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-            </h1>
-        </div>
+        <?php include 'includes/navbar.inc.php'; ?>
         <div class="ondertitel">
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Details

@@ -54,11 +54,7 @@ $city = htmlentities($row['city']);
 
 <header>
 
-    <div class="titel">
-        <h1 style="color:white; margin-left:50px; font-family: arial;">
-            <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-        </h1>
-    </div>
+    <?php include 'includes/navbar.inc.php'; ?>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             Reservering wijzigen

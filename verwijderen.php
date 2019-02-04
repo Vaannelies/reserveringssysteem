@@ -19,11 +19,6 @@ $select = "SELECT * FROM reserveringen WHERE id = $id";
 $results = mysqli_query($conn,$select)
 or die('Error ' . mysqli_error($conn) . '<br> Query:' . $select);
 $row = $results->fetch_assoc();
-
-
-
-
-
 ?>
     <!doctype html>
     <html lang="en">
@@ -36,14 +31,8 @@ $row = $results->fetch_assoc();
         <link rel="stylesheet" href="stylesheet_home.css">
     </head>
     <body>
-
     <header>
-
-        <div class="titel">
-            <h1 style="color:white; margin-left:50px; font-family: arial;">
-                <a href="Start.php" style="color:white; text-decoration-line:none;">Christa</a>
-            </h1>
-        </div>
+        <?php include 'includes/navbar.inc.php'; ?>
         <div class="ondertitel">
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Verwijderen
@@ -61,9 +50,7 @@ $row = $results->fetch_assoc();
                     Log uit</button>
                 <!-- </div> -->
             </h1>
-
         </div>
-
     </header>
     </body>
     </html>
@@ -85,15 +72,6 @@ $row = $results->fetch_assoc();
     <script>
         function goBack() {
             window.history.back();
-
-
-
-
-
-
-
-
         }
     </script>
-
 <?php } ?>
