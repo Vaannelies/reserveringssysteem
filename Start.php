@@ -19,12 +19,14 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="stylesheet_home.css">
 </head>
+<body>
 
 <div class="afbeeldingenoverlay" style="align-items:stretch; ">
     <div class="afbeeldingen">
 
-        <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
+
         <img src="https://images3.persgroep.net/rcs/RLZJ94jTZb6ZaTG-SYjDuVCX9z0/diocontent/112673080/_crop/0/0/1671/944/_fitwidth/763?appId=93a17a8fd81db0de025c8abd1cca1279&quality=0.8">
+        <img name="slide">
         <img src="https://www.1limburg.nl/sites/default/files/public/styles/media-paragraph/public/kapper_0.jpg?itok=YmnHiFpE">
 
     </div>
@@ -82,31 +84,47 @@
     </section>
 
 
-    <?php
 
 
+<?php
     //Let op: voor de isset staat een !. -> Er wordt dus gekeken of de sessie NIET bestaat. In dat geval wordt er om login gevraagd.
     if (!isset($_SESSION['username'])){ ?>
         <footer>
-
-        <button class="footerbutton" onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
+            <button class="footerbutton" onclick="window.location.href = 'login.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Admin </button>
             <a class="algvw" style="color:#313131;" href="algemene_voorwaarden.php"><span class="alg"></span></a>
-
         </footer>
       <?php } else { ?>
         <footer class="ingelogd">
-
-        <button class="footerbutton" onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Log uit</button>
-        <button class="footerbutton" onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:200px; height: 30px; font-size: 16px; margin-left: 20px;"> Reserveringen bekijken </button>
-
+            <button class="footerbutton" onclick="window.location.href = 'logout.php';" style="border-radius:5px; width:100px; height: 30px; font-size: 16px; margin-left: 20px;"> Log uit</button>
+            <button class="footerbutton" onclick="window.location.href = 'weergeven.php';" style="border-radius:5px; width:200px; height: 30px; font-size: 16px; margin-left: 20px;"> Reserveringen bekijken </button>
             <a class="algvw" style="color:#313131;" href="algemene_voorwaarden.php"><span class="alg"></span></a>
         </footer>
-   <?php }
-
-
-?>
+   <?php } ?>
 
 
 </body>
+
+<script>
+    let i = 0;
+    let images = [];
+    let time = 1500;
+
+    images[0] = "https://i.etsystatic.com/15439563/r/il/961d2f/1238341186/il_570xN.1238341186_8qwg.jpg";
+    images[1] = "images/kam.png";
+
+
+    function changeImg(){
+        document.slide.src = images[i];
+        if (i < images.length - 1){
+            i++;
+        } else {
+            i = 0;
+        }
+        setTimeout("changeImg()", time);
+    }
+
+    window.onload = changeImg;
+
+</script>
 
 </html>
