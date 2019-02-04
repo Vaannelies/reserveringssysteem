@@ -64,7 +64,7 @@ $faker = Faker\Factory::create();
             STAP 1 > STAP 2 > STAP 3
         </h1>
 
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; padding-right:10px;">
             <button  onclick="goBack()"
                      class="terugknopboven">Terug</button>
         </h1>
