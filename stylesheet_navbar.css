@@ -10,10 +10,24 @@
     width:auto;
     padding-right:10px;
     padding-left:10px;
+    justify-content:space-between;
 }
 
-button.terugknopboven{
 
+h1.terugknopboven{
+    margin-top:-1px;
+}
+
+h1.terugknopbovenad{
+    margin-top:-1px;
+    display: flex;
+    justify-content: flex-end;
+    color:white;
+    margin-left:50px;
+    font-family: arial;
+    font-size:20px;
+    margin-top:-38px;
+    padding-right:10px;
 }
 
 @media(max-width: 800px){
@@ -47,11 +61,6 @@ button.terugknopboven{
         width:auto;
     }
 
-    #menu{
-        display:flex;
-        justify-content:center;
-        width:auto;
-    }
 
     button.terugknopboven{
       width:100px;
@@ -60,8 +69,21 @@ button.terugknopboven{
 
 @media(max-width: 600px){
     div.ondertitel{
-        height:60px;
+        height:20%;
         display:flex;
+        margin-top:0px;
 
     }
+
+    h1.terugknopboven{
+        margin-top:380px;
+        padding-top:60px;
+    }
+
+    h1.terugknopbovenad{
+        display:block;
+        padding-top:60px;
+    }
+
+
 }

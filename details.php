@@ -61,7 +61,7 @@ if (!isset($_SESSION['username'])){
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Details
             </h1>
-            <h1  class="terugknopboven"  style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+            <h1  class="terugknopbovenad">
 
 
                 <!--  <div style="margin-left:60%;"> -->

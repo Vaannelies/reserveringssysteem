@@ -38,7 +38,7 @@ $row = $results->fetch_assoc();
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Verwijderen
             </h1>
-            <h1 class="terugknopboven"  style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+            <h1 class="terugknopbovenad">
 
                 <!--  <div style="margin-left:60%;"> -->
                 <button class="terugknopboven"  onclick="goBack()" style="border-radius:5px;
