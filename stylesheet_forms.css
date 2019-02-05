@@ -5,6 +5,7 @@
 
 body{
     font-family:arial;
+
 }
 
 button{
@@ -22,4 +23,24 @@ button{
     font-size:16px;
     background-color:#a4bde3;
     border: solid 2px #416aff;
+}
+
+div.afspraak{
+    margin-left:20px;
+}
+
+div.personal_en_afspraak{
+    display:flex;
+    flex-direction:row;
+    background-color:lawngreen;
+}
+@media(max-width:800px) {
+    div.personal_en_afspraak {
+
+        flex-direction: column;
+        background-color: red;
+    }
+    div.afspraak{
+        margin-left:0px;
+    }
 }

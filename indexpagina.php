@@ -88,7 +88,7 @@ else{
 <div style="margin-left: 50px;">
     <form action="bevestigd.php" method="post">
         <br>
-      <div style="display:flex; flex-direction: row; ">
+      <div class="personal_en_afspraak">
         <div>
             Voornaam:<br>
             <input class="text-box" type="text" name="firstname" maxlength="50" placeholder="<?= $faker->firstName?>" required>
@@ -157,7 +157,7 @@ else{
         </div>
 
         <!--tijdgegevens-->
-        <div style="margin-left:20px;">
+        <div class="afspraak">
 
             Datum van afspraak:<br>
             <input type="date" name="date" id="date" class="text-box"/>
