@@ -62,9 +62,9 @@ else{
         <br>
 
         <!--Alle behandelingen-->
-        <div style="display:flex; flex-direction:row; justify-content: flex-start;">
+        <div class="behandelingen">
             <!--afbeelding en aantal personen -->
-            <div style="display:flex; flex-direction:column; width:150px; text-align:center;">
+            <div class="knippen" style="flex-direction:column; width:150px; text-align:center;">
                 <img style="width:150px; height:150px;" src="images/knippen.png"><br>
                 Knippen:<br>
                  <!--aantal personen-->
