@@ -86,7 +86,7 @@ $city = htmlentities($row['city']);
 <br>
 <div style="margin-left: 50px;">
     <div >
-<form action="bevestigd_wijzigen.php" method="post" style="display:flex; justify-content:flex-end; flex-direction:column; width:400px;">
+<form class="wijzigen" action="bevestigd_wijzigen.php" method="post">
     Voornaam:
     <input class="text-box" type="text" name="firstname" value="<?=$firstname?>" required><br><br>
 
