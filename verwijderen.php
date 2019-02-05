@@ -29,6 +29,7 @@ $row = $results->fetch_assoc();
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link rel="stylesheet" href="stylesheet_home.css">
+        <link rel="stylesheet" href="stylesheet_navbar.css">
     </head>
     <body>
     <header>
@@ -37,13 +38,13 @@ $row = $results->fetch_assoc();
             <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
                 Verwijderen
             </h1>
-            <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+            <h1 class="terugknopboven"  style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
                 <!--  <div style="margin-left:60%;"> -->
-                <button onclick="goBack()" style="border-radius:5px;
+                <button class="terugknopboven"  onclick="goBack()" style="border-radius:5px;
                     width:100px; height: 30px;
                      font-size: 16px;">Terug</button>
-                <button onclick="window.location.href = 'logout.php';"
+                <button class="terugknopboven"  onclick="window.location.href = 'logout.php';"
                         style="border-radius:5px;
                     width:100px; height: 30px;
                      font-size: 16px;">
