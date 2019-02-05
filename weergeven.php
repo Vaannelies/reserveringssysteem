@@ -36,15 +36,15 @@ session_start();
     <?php include 'includes/navbar.inc.php'; ?>
     <div class="ondertitel">
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
-        Reserveringen
+    Reserveringen
         </h1>
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+        <h1 class="terugknopbovenad">
 
           <!--  <div style="margin-left:60%;"> -->
             <button onclick="window.location.href = 'Start.php';"
                     style="border-radius:5px;
-                    width:200px; height: 30px;
-                    font-size: 16px;">
+                    width:auto; height: auto;
+                    font-size: 70%;">
                 Terug naar startpagina </button>
             <button onclick="window.location.href = 'logout.php';"
                     style="border-radius:5px;
@@ -59,8 +59,6 @@ session_start();
 </header>
 
 <?php
-
-
         $ophalen = "SELECT * FROM reserveringen ORDER BY id DESC";
 
 
@@ -68,9 +66,6 @@ session_start();
         or die('Error ' . mysqli_error($conn) . '<br> Query:' . $query);          //reserveringen opgehaald
 
         $reserveringen = [];                                                //array ervoor gemaakt
-
-
-
 
 
 
