@@ -5,6 +5,8 @@
     <title>Algemene voorwaarden</title>
     <link rel="stylesheet" href="stylesheet_algemene_voorwaarden.css">
     <link rel="stylesheet" href="stylesheet_home.css">
+    <link rel="stylesheet" href="stylesheet_forms.css">
+    <link rel="stylesheet" href="stylesheet_navbar.css">
 </head>
 <body>
 
@@ -18,7 +20,7 @@
         <h1 style="color:white; margin-left:50px; font-family: arial; font-size:20px;">
             Algemene voorwaarden
         </h1>
-        <h1 style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
+        <h1 class="terugknopboven" style="display: flex; justify-content: flex-end; color:white; margin-left:50px; font-family: arial; font-size:20px; margin-top:-38px; padding-right:10px;">
 
             <!--  <div style="margin-left:60%;"> -->
             <button  onclick="goBack()"
