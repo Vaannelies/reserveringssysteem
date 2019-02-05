@@ -32,14 +32,14 @@ div.afspraak{
 div.personal_en_afspraak{
     display:flex;
     flex-direction:row;
-    background-color:lawngreen;
 }
-@media(max-width:800px) {
-    div.personal_en_afspraak {
 
+@media(max-width:800px) {
+
+    div.personal_en_afspraak {
         flex-direction: column;
-        background-color: red;
     }
+    
     div.afspraak{
         margin-left:0px;
     }
